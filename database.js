@@ -4,15 +4,16 @@ const database = new Database('database.db');
 export function init() {
     database.exec(`
     CREATE TABLE IF NOT EXISTS storage(
-        item TEXT PRIMARY KEY,
+        item TEXT,
         count INTEGER,
-        time INTEGER
+        time INTEGER,
+	PRIMARY KEY(item, time)
     ) STRICT
     `);
 }
 
 export function insert_storage(item, count, time) {
-    const insert = database.prepare('INSERT INTO storage (item, count, time) VALUES (?, ?, ?)');
+    const insert = database.prepare('INSERT OR IGNORE INTO storage (item, count, time) VALUES (?, ?, ?)');
     insert.run(item, count, time);
     insert.close();
 }

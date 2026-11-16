@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 });
 
 app.post('/api/stock', (req, res) => {
-    const time = DateTime.now()
+    const time = Date.now()
     const data = req.body.split(", ");
     for (let i = 0; i < data.length; i++) {
         let item = data[i].split(" x")
