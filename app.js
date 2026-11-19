@@ -1,58 +1,75 @@
-import express from 'express';
-import {init, insert_stress, get_stress_history, get_stress, insert_storage, get_storage, get_storage_history} from  "./database.js";
+import { serve, sql } from "bun";
+import { Database } from "bun:sqlite";
 
-const app = express();
-const port = 3333;
+const db = new Database("database.db");
 
-app.use(express.text({ type: '*/*' }));
+const server = serve({
+  routes: {
 
-init()
+    // stock api 
+    "/api/stock": {
+      async GET(req) {
+        const stock = await db.query(`SELECT * FROM storage WHERE time = (SELECT MAX(time) FROM storage AS s2 WHERE s2.item = storage.item)`).all();
+        return Response.json(stock);
+      },
 
-app.use(express.static(path.join(__dirname, 'public')));
+      async POST(req) {
+        const data = await req.body.split(", ");
+        for (let i = 0; i < data.length; i++) {
+            let item = data[i].split(" x")
+            db.query(`INSERT INTO storage (item, count, time) VALUES (${item[0]}, ${item[1]}, ${time})`).run()
+        }
+        return Response.json("success");
+      },
+    },
 
-app.get('/', (req, res) => {
-    res.send('Hello World!');
+    "/api/stock/history": async req => {
+      const stock_history = await db.query(`SELECT * FROM storage`).all();
+      return Response.json(stock_history);
+    },
+
+
+    // stress api
+    "/api/stress" : {
+        async GET(req) {
+            const stress = await db.query(`SELECT *, MAX(time) FROM stress`).all();
+            return Response.json(stress);
+        },
+    },
+    "/api/stress/current/:current/max/:max" : {
+        async PUT(req) {
+            const time = Date.now()
+            db.query(`INSERT OR IGNORE INTO stress (current, max, time) VALUES (${req.params.current}, ${req.params.max}, ${time})`).run()
+            return Response.json("sucess")
+        }
+    },
+    "/api/stress/history": async req => {
+      const stress_history = await db.query(`SELECT * FROM stress`).all();
+      return Response.json(stress_history);
+    },
+  },
+
+  development: true,
 });
 
-// sress
-app.put('/api/stress/current/:current/max/:max', (req, res) => {
-    const time = Date.now()
-    insert_stress(req.params.current, req.params.max, time)
-    res.send("success");
-});
+function init() {
+    db.query(`
+    CREATE TABLE IF NOT EXISTS storage(
+        item TEXT,
+        count INTEGER,
+        time INTEGER,
+	PRIMARY KEY(item, time)
+    ) STRICT
+    `).run();
 
-app.get('/api/stress', (req, res) => {
-    const storage = get_stress()
-    res.send(storage);
-});
-
-app.get('/api/stress/history', (req, res) => {
-    const storage = get_stress_history()
-    res.send(storage);
-});
-
-
-// stock 
-app.post('/api/stock', (req, res) => {
-    const time = Date.now()
-    const data = req.body.split(", ");
-    for (let i = 0; i < data.length; i++) {
-        let item = data[i].split(" x")
-        insert_storage(item[0], item[1], time)
-    }
-    res.send("success");
-});
-
-app.get('/api/stock', (req, res) => {
-    const storage = get_storage()
-    res.send(storage);
-});
-
-app.get('/api/stock/history', (req, res) => {
-    const storage = get_storage_history()
-    res.send(storage);
-});
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
-});
+    db.query(`
+    CREATE TABLE IF NOT EXISTS stress(
+        current INTEGER,
+        max INTEGER,
+        time INTEGER,
+	PRIMARY KEY(time)
+    ) STRICT
+    `).run();
+}
+init();
+console.log(`Listening on ${server.url}`);

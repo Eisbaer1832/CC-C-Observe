@@ -1,22 +1,13 @@
 {
   "name": "cc-c-observe",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "typecheck": "bun check"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Eisbaer1832/CC-C-Observe.git"
+  "devDependencies": {
+    "@types/bun": "latest"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Eisbaer1832/CC-C-Observe/issues"
-  },
-  "homepage": "https://github.com/Eisbaer1832/CC-C-Observe#readme",
-  "dependencies": {
-    "express": "^5.3.0"
+  "peerDependencies": {
+    "typescript": "^7"
   }
 }
