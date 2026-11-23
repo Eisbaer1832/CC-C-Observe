@@ -2,12 +2,19 @@
   "name": "cc-c-observe",
   "private": true,
   "scripts": {
-    "typecheck": "bun check"
+    "typecheck": "bun check",
+    "build:watch": "bun build ./public/js/dashboard.js --outdir ./public/dist --target browser --watch"
   },
   "devDependencies": {
     "@types/bun": "latest"
   },
   "peerDependencies": {
     "typescript": "^7"
+  },
+  "dependencies": {
+    "chart.js": "^4.6.1",
+    "chartjs": "^0.3.24",
+    "jquery": "^4.1.0",
+    "oreui-web": "^0.0.1"
   }
 }

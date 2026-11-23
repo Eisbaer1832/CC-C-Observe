@@ -1,15 +1,17 @@
 import { serve, sql } from "bun";
 import { Database } from "bun:sqlite";
+import dashboard from "./public/html/dashboard.html"
 
 const db = new Database("database.db");
 
 const server = serve({
   routes: {
+    "/" : dashboard,
 
     // stock api 
     "/api/stock": {
       async GET(req) {
-        const stock = await db.query(`SELECT * FROM storage WHERE time = (SELECT MAX(time) FROM storage AS s2 WHERE s2.item = storage.item)`).all();
+        const stock = await db.query(`SELECT * FROM storage WHERE time = (SELECT MAX(time) FROM storage AS s2 WHERE s2.item = storage.item) ORDER BY count DESC`).all();
         return Response.json(stock);
       },
 
@@ -32,7 +34,7 @@ const server = serve({
     // stress api
     "/api/stress" : {
         async GET(req) {
-            const stress = await db.query(`SELECT *, MAX(time) FROM stress`).all();
+            const stress = await db.query(`SELECT *, MAX(time) FROM stress`).get();
             return Response.json(stress);
         },
     },
