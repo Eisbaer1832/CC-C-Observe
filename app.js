@@ -16,11 +16,18 @@ const server = serve({
       },
 
       async POST(req) {
-        const data = await req.body.split(", ");
+        const data = (await req.text()).split(", ");
+        const time = Date.now()
         for (let i = 0; i < data.length; i++) {
             let item = data[i].split(" x")
-            db.query(`INSERT INTO storage (item, count, time) VALUES (${item[0]}, ${item[1]}, ${time})`).run()
-        }
+	    console.log(item)
+	    db.query(`
+	     	INSERT INTO storage (item, count, time)
+	        VALUES (?, ?, ?)
+	        ON CONFLICT(item, time) DO UPDATE SET
+	        	count = storage.count + excluded.count
+	    `).run(item[0], Number(item[1]), time);
+	}
         return Response.json("success");
       },
     },
