@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "typecheck": "bun check",
-    "build:watch": "bun build ./public/js/dashboard.js --outdir ./public/dist --target browser --watch"
+    "build:watch": "bun build ./public/js/dashboard.js --outdir ./public/dist --target browser --watch",
   },
   "devDependencies": {
     "@types/bun": "latest"

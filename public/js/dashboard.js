@@ -10,12 +10,14 @@ async function get_stress() {
 }
 
 async function get_items() {
-    const out = await fetch(`/api/stock/history`)
+    const out = await fetch(`/api/stock`)
     const stock = await out.json()
-
     const table_body = $("#item_list")
     stock.forEach(item => {
-        table_body.append($(`<tr><th scope="row">${item.item}</th><td>${item.count}</td></tr>`))
+        let split_name = item.item.split(":")
+        let namespace = split_name[0]
+        let name = split_name[1]
+        table_body.append($(`<tr style="text-align: center;"><th style="width:10%" scope="row"><img class="item-img" src="/textures/${namespace}/${name}.png" alt=""></th><th scope="row">${item.item}</th><td>${item.count}</td></tr>`))
     });
     
 }
@@ -23,32 +25,63 @@ async function get_items() {
 async function init_stock_history() {
     const ctx = document.getElementById('item_history_chart');
     const out = await fetch(`/api/stock/history`)
-    const stock = await out.json()
+    let stock = await out.json()
+    let items = new Map()
 
-    const time = []
-    const count = []
+    let times = []
+    stock = stock.sort((a,b) => a.count - b.count)
+    console.log(stock)
     stock.forEach(item => {
-        if (item.item == "Cherry Log") {
-            time.push(item.time)
-            count.push(item.count)
+        let stored_item = items.get(item.item)
+        
+        let add_time = false
+        if (stored_item == undefined)  {
+            items.set(item.item, {
+                    label: item.item,
+                    data: [item.count],
+                    borderWidth: 1
+                })
+            add_time = true
+        }else {
+            let current_data = items.get(item.item).data
+            // do not add unchanged counts to improve performance
+            if (current_data[current_data.length - 1] != item.count) {
+                items.get(item.item).data.push(item.count)
+                add_time = true
+            }
+        }
+        if (add_time) {
+            if (!times.includes(item.time)) {times.push(item.time)}
         }
     })
+
+    function format(d){
+        return `${d.getDate()}.${d.getMonth()};${d.getHours()}:${d.getMinutes()}`
+    }
+    // format times
+    let time_strings = times.map( t => format(new Date(t)) )
+    
     new Chart(ctx, {
         type: 'line',
         data: {
-            labels: time,
-            datasets: [{
-            label: 'Cherry Logs',
-            data: count,
-            borderWidth: 1
-            }]
+            labels: time_strings,
+            datasets: Array.from(items.values())
         },
         options: {
             scales: {
-            y: {
-                beginAtZero: false
-            }
-            }
+                y: {
+                    beginAtZero: false
+                }
+            },
+            plugins: {
+                legend: {
+                    position: 'right',
+                    labels: {
+                        boxWidth: 2,
+                        font: { size: 10 }
+                    }
+                }
+            },
         }
     });
 }

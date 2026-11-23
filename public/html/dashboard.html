@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/dist/dashboard.css">
+    
     <title>Dashboard</title>
-    <link rel="stylesheet" href="/public/css/common.css">
-</head>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" crossorigin href="../dist/dashboard.css"><script type="module" crossorigin src="../dist/dashboard.js"></script></head>
 <body>
     <div class="row" style="justify-content: space-between;">
         <div>
@@ -40,6 +40,7 @@
                     <table>
                         <thead>
                             <tr>
+                                <th style="width:10%" scope="col"></th>
                                 <th scope="col">Item</th>
                                 <th scope="col">Anzahl</th>
                             </tr>
@@ -56,5 +57,6 @@
         </div>
     </div>
 </body>
-<script type="module"  src="/public/dist/dashboard.js"></script>
+
 </html>
+

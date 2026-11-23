@@ -20,14 +20,14 @@ const server = serve({
         const time = Date.now()
         for (let i = 0; i < data.length; i++) {
             let item = data[i].split(" x")
-	    console.log(item)
-	    db.query(`
-	     	INSERT INTO storage (item, count, time)
-	        VALUES (?, ?, ?)
-	        ON CONFLICT(item, time) DO UPDATE SET
-	        	count = storage.count + excluded.count
-	    `).run(item[0], Number(item[1]), time);
-	}
+          console.log(item)
+          db.query(`
+            INSERT INTO storage (item, count, time)
+              VALUES (?, ?, ?)
+              ON CONFLICT(item, time) DO UPDATE SET
+                count = storage.count + excluded.count
+          `).run(item[0], Number(item[1]), time);
+        }
         return Response.json("success");
       },
     },
@@ -56,6 +56,11 @@ const server = serve({
       const stress_history = await db.query(`SELECT * FROM stress`).all();
       return Response.json(stress_history);
     },
+
+  },
+  async fetch(req) {
+    const file = Bun.file("./public" + new URL(req.url).pathname);
+    return (await file.exists()) ? new Response(file) : new Response("Not found", { status: 404 });
   },
 
   development: true,

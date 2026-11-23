@@ -1,3 +1,16 @@
+body {
+    background-color: var(--ore-color-neutral-surface-sunken);
+}
+
+.item-img {
+    object-fit: cover;
+    border-radius: 0.5rem;
+    image-rendering: pixelated;
+    justify-self: left;
+    width: 100%;
+}
+
+
 .row {
     display: flex;
     justify-content: start;
