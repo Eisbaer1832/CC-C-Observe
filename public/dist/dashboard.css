@@ -1,0 +1,3047 @@
+/* node_modules/oreui-web/dist/styles.css */
+@layer theme, base, components, utilities;
+
+@font-face {
+  font-family: Minecraft;
+  src: url("data:font/woff2;base64,d09GMk9UVE8AABIwAAoAAAAALEgAABHhAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAADcVSP0ZGVE0cBmAAg3IBNgIkA4QiBAYFhy4HIBuPK7MRNmwcABo9p4uibG/GgP/TASdjPzaOaXVoHktQdibFruR1ps446YnrCjYi9ZXF1+msvzz/L3zqbDemGwkSxF3/e1avcp3R8OwRGvsk9w/a1r+lhMUg6vzILBjrL/SCuCjsNQpM9KK4yDQKvSxEuLTqqnKvwcT/Z795iSRCfRXRSlKfxS9qdWelWQoLAOLpL7bv3U0apB+i6MCaqCzwQEsSv8xDaPwg0826A/pDMzM9owxSE49Zy1JOt1Uq1zh0+fFc+NfHQGX6BBmbIPEpA2L01CHCBHjIBAlKXzPONgpVhvsOZ4nV1ux/AP/w0L/ck09UG9L1J2sjXtCTlKhiY6WS3aT4/+i2UaLKXYGYgF7dY6mq5bAFl3MAfWwBImEFiAz7dmXv/03N6NgbpbSu6/jwPudaBewIlP7MaKyZsbRWsbPWVmlTt6R0X16exnaKvVe8vlIaQb3zA/hY6KHWAD4cAAMQOJVxfrdSSbTGc6ht914PKk9gzy5TEVeS09sDrusFbEWGVSNoMyBBeK3JjhB8Tg6HP190wUCrgFD+vcA5EKcPxSmjOiW09KTmXPPanjtS2LuXAnAG0vxKQTvkpQa0AoLpf4NEvG1tEjw0lNJBxsBRxi72n9zenxghODyFjuEd2xlxoBEDOghSVrT6/wWTNhSbOw+evHBw8fAJCImISTJpu34Yp3lZt/04rxtAhAllXEiljXU+xJRLfd5PFxIaFh4RGUVEx8TGxSckJiXrDSmpaekZmcas7GFjZq03fMTIcWMnbMza/baZOWO1eQvtDtvgqHp5Tl06f+FyoavXb9y6fe/R/QcPdyrx4umz56/yC81+5r8CXxdiel6BSgnHajTjKp7gCzqpUe1gO9cDaTn94nCnZw/zeMxBjEgewef5mYTKFrkhLu3LnK2btUkfG5elYultuZ2zx46i/dGJnuN3vZ0dFaMjL85Fl/uI3JLfPNge8XPyPDKb5vuFeWatjatpvSsfL6JGVGk9qTaOkhPKmcGxr9cQchO5i7kluIHfvFG8ddZMBl/GN/IL+ZJtApYAE+gF5n3D/xfu9wa/HP1FSaKc2BOtqRavyZOFSHpLCutmB/cY28Pe37z7ec/1fqS+f61Si+6oQyqRZkp3n8+j8kn3aZ0XlyqLkM2X1fyv7Xx9TdN21NSavt2zpL4H/zqfka9sXqt8fvr78mq8rx+rqHQ94S5Gef5DS/81Hw9tfaj6uJizp7FgWAZd9ijU/LcuKfBy4J0rwsWhuvt3FRdcJm9Ju8sicib4own3AtSAbCVrhNXbbtQiKXRV4TJDqX25BSu1tkQRa0UbLviE+NqAKHe84nLhhXfMCsZPx5VNpx4zeNIC5b6T9DqTWbnk3MHR7i4BZgLvG3I/MlxhOc1aIBbAVCHy0SzKvk+I+AxJ1p4j1hhRxlsFHpMYckoFiBQkiIen7RUMMUqPYeoZovc6o8OZc7MVemgvv3W1dyf49+HP3cV7Up4vdOpeBj8u3c+SuvBnFDc7XN0uvQhgEIYscgkrqyYarNI8hk1CSr+I9FW8vYmkOwxGBU32rLiX/1m3cE12n1yxKDoMDEXKmqDP3LOlMBFvKOMV1KCqtrj0W5G1joa2iWZZ2mrZ7WU3RQtKEWbUmllp1YLU9rxiu0E5aURoMzir5Dtf+L4eGnXhyz4Ln/BEFalz4FERMuGxSWaL70lHzWHXjlbloSYN/i+7pUJcj3iKeV/hIj5oleMAjJjKw+UkWKE+zUQ6aYeB0iD01ZyanAUDI7ndWM1mDyWSIz5ZcaG0cOlYj1XQNntl+xmUbnSNOYMzE6tFcwcTDgdP3bvMMskZpmqk+xNhP8p9n3DuiolRh94c46hQAzF7/47YCeXSqRaKWebbt7OceF2YiHP8T3F4k5HFU4+WW5iwbGIS1Ihs1CXCY7qrtqm6EcFbsRP2sBjNUnuBdMAKnHjpXWIUYoFUQD+BTB40i6rNqxf2VNtk4mTRU3xZaBDOmZhUbPcirHdSxNHwWNewQqZ2QGXbvMRJuZwwhmbd+Xgdz7iyvUOyMMnaGXOhVb0Ve5GRyGFW3rh0Egvvq52INkl4UMM39bSxq6yOBqcplCwuYNoCLi3HzBcM0fnLql2qq8Nn9mK7ts1BT4Vimi0w5isrONVTDHYbMmN5HQeEvfUschoXFlbcVuxG6zIvfwYcxrCAPm/zeYtdHjuVk1NfXCw/pSjW2Fz8z6VwAnm9rj28N3Mh5nrCUWTDanmVyA0HIFi9DyW16AGS4e9xHTvHUUeKE3oDoRkqZEvfHbO4+S0xcSpjQqgOvZ+huFkNYhnR0ACHeWUYrEbyUM+zipYcgpcezJFNiT1lmD31hEUurB24RhTp5rvjaBiTlV9/paZPGGc5ja3cSU5DMPlVUIf5tRUH5p/dXapiaW7m9SM/i+DuTIrE9D3oRI5Jgi/ZwMLSlVFA5YfBNDYjHq2Q2sC6AXaAp8AOroPv1EM3L1M4L+qafqPDf2OR4NX8w6xOQFmgItIxfPP2PAV4Sp409h58qymj1uHwYtD0fbo1Fjs65vSQkVIntmQ9tDEVYzANV8Z1AlY7pcBaV+2RB4y00Po0U0voquDXd44idHiOjqPkemFhT0PDMRCjQ+YzVJMFZQaUAaAUSmrcEDP30aajFi6nFtb5aALHSKHdi2lXNLWbcJ4AK3EOGvYukjkhNRqB4M7ryZscVv0qfW8Iss+xRiDnYj1ee4mXg48gpPRqk4rExYpo3rxBxR8bOXHX72OWIAnBdvBsEJ6Sk2vk1HrQhUFdhlFwWLVKuxPI8cvjldoIhQkSRL1gYoCn0OVw8gJUGwiqSk9UyV4ym5mPjd73HDtXuw//an5Ew5ldDGxf1LhLMbXS3/NZPyTssRk0yxPZubwnNWK2VdkQGAyzolk9QEykaFPW1PeAKnSEDiFOrGpZaS9MsihHji442zBWYx5RiXa0c2x9s2MUGVglZC/1tIhUbmHfyGHNtUwFMPDnLGxLbB0NDy43d0qTDmfDSEP+g6Mrw0D2UqJtUAZGNwswotEIrUDIASejhTI4c/8MIco2AKCsLX7vBRHwXzg76IQHg7+TTxNk1jL9W99zEcXHzCEkq4i8kNHCosc5SAadAh+I65JBEWKh5rs5hKI0bpkIVhV0k7AwjVBjhqlxStLvOnBRxFSkQyh3EMmVolILqYt2YNbYngxh4ZPmJ2rhHPwQGxjAE8iK7A+UegX4V5b9UbyVdyv1JH74V6CALqwh4CZmcQXQ6koK+kzOxGRlEvRYP8EOEp79U149Xp7i9qjFDtIPbAP1ncCcgUXSGfxcE41B2my3yA3bQpWZ6cCKvtDiMQCgCOI9/LK4EEPCu1EPyltdweF5bzebvyFT9ULGcFgaV+sKWZg3quUb8vbI4pYWGKikxQhvF2UBP8Nlhf0cJDAOK3JAtOFet5Fz30oO0/MzleKbyhRA6yl1cqK6ovKmU8ofpN/HAK00mARoTV2jSv2PKYxwzNqxx0vL5KTHh85Y6wFXaeO+Jsshp5cT8/+dowGCu7vpKSDFr6nvcJ/tzuC9OB/+S0ZFcmSmrR/eBjaY/mJHcdcqOH02WWNtlobuLPeuhgGpzY7ItrCzmcCoY7Dixgyb58cjWEKrBQVbzttX8scBkj7gT7L10dEfsu3L41xoePzyttq1otmTjNxLzM7HwKCsTpY4XL7EFJ3Yx5Qkl5C/mdnB6TssglrkZF4fgQ+cwDEKQ4fl54+KsP14mJaqtjlpEtS6q0mgg3aQLiMgfelLbifj+Ng706eWLKb7rNaKIdrLpyQkoc1mQ5obCcOWlTJJSfr8TGhsN4M+l2khV89aruxgYNZsB8026Ulvme7vRvaOb1flwsctDTv60/n626jzcl0XpLeLEkpZ+APGbQvhgjmMIOVAoC1wTYKX1s6jqtxwbDb+bqwfOmiGdPN6tIA6PEFv7mcYcXj5qYWO/XsTxA0GEf+phQfpElxmcc+2Z9KW+VthPmGEFRgDBOHXf6GoYw6Hcawu5AzWwU9bWezfCRF78l0p2z1cmcVALmsp8vhyFalnum2sZhWxVIjqqCZdzn9S1pVSLQq5RGAVBYkzJobUiPqXlGRLBwq1gvD8+Y/RTnRbaFn8ypHhmqFVV2+mLu7+mYaH96oEh3zOnyqAwL3iRFlbxHGId1Vmr0OGbU4LBjjrtt2JxxTFJrVKAGAuteQRMKgQ0FmizZdTgz2WcqDxMms5MEOqbJbAbj6ibR6XEwUMwspNh4TMxYzsi7wY27TYlOrasqrh5bmkDae/CBaskxtsLfw1Um+ps/LqSFMmOdyJkaHi4jdaHD/VaK2J6Bh6SxxNpKaKsHTTRVrTEt2+yIlKkCGdEu2OqNHhHC7JXb3dlI5qw6+tyVpcTwgPsmk1ObNqb13favEZNjELa01wZadI0V8vP8GqkpmHghpBIXXUoCnTpiklw6qaw6hl69m1gEWZTEdBbSXMwNq9TtPHvaDKAiothSIUIs9sYfOJkxOo9uFUhnZHMYuATawJK8PakG3lFm1ZUOE37yD3ibmrx8FPnQN1rsPUiunRLkg+8KfjN7rROgge19cCbaFK8P9O5T/SM3FwEs3pwb52jHWjALZQLzEqBz11fdpGZY7KM6ZsEbZ5U93lWEGfKDKe3FaRwqdG2rTCFdQ436xMP6y7P1fl2XIXjaCcm6GHHbKgPGAvdlQTijWe8/PZn8K/VBZi1QfPJBSALybZRDo4Hkotp1oWaptlFOpFVP+dBm8QANev5joT6tZmphTnLoDnzyfM1ZNVD2QYzn3/uXjdG5lmBgryJ7l7z0ydy6ju/5Th/K377/yI1mo3vS45k8oylLo0WTmJ5iSbdPKQ7u5kkId0eNdDhjJcyZOC9gCSIExPoVQRGKQemJTOKnb29dlkqTl55eHHzh3nhI13GJ3B7jC6w4ntaCU7YrBxh9Hd2ORVAGCE224iJKYWtWIIfq+BE3BxSIdXa3xdNoSbDPJDfvg51TBOvpuf5ZzD/rwdgJLciMy4IRx4AhwSVzfAlEBiFKgWVpbc+Tq8pCSWSkXyUTiDDQAIALh82fPm19w9Mcq+2bWhQKsfUkh0zG5AGgGiu/dFHjTLfwAAdKMbUn0nw/3jin/YUUHFXNrz03s6T+1uyEZpJAwGKVCnQtovAvgskMMimus/lGAYGo5han8OOuSoWg1anHPDfY+99M4nX/3SyYUU/wJM4XIFmBG+HVThqOpS2un3fe6Nj7747o/uv1/z3AktGtWrVukou3122GqTMmYlihTK/+/z2OeDADF6SsgOilotCq22hVYrQ6u98XkkV/j6+QfgJwFEmFDGhVTaWOdDTLnU5/0Wy5DQsPCIyCgiOiY2Lj4hMSlZb0hJTUvPyDRmZYPnz4IISTZvAaCoAHWzbDmsWLVy9RrYsD4nF0AQxw6fBDr6uwYxGHiv8tNyL14FA+Oe4FNGAMBaeccHN9kwawqJnN5XfFZMGdYZ8JvJpr63ODbf49LaoWgkAKaUywACqL85kAdFbWUuXJlfs5CVn7cynE+dzkKWGRuGT4Hz82do6ADnaTGa2rfR4SEj63CGcDWOk/GnyEr1cP8svAIOqgMmN8PJ0lQ8LB8tA/MAuyh0ouJrbLQxAfINCvyxoX650GUdwbJAp3Bj1qmk7uo03Ih1ugHZqzNwS9OZONXqLO4dtdeDuLsiXHFmpX4dDDqCZ6xO4WmVTqW1TadR+KnTzcvfOoMiz3UmrCKdRdKoC4cHZafRisOV8WkUqhAph+klWE8amJEyhMAROHgklITnsDlGoHXiPShvmfjnAsTS2CQCH0cWQv9ZSSSKiInjQ+PJQ9CTUvD4x+rP4OTD1RxfyyEW3vNPt8LzzSTzNpn1kOQkVnIG2SmqUV9AE76ZGBxN8IKWlZReE8eFUMaND3uUtLTp0Mk4Binfm8lGJtHwZltGtUetD83YrwKruhDBtick0xtZfKxpavj3ViExVmq1/ZuyGuxvWR5NGs/PlCqluo9GowKN1VPTKGFtV2qPS6X9YTRAwsWxw/kAiNsqvvDLgABtxEiaYA57gHB+7pUQbGcuyAptawQVZ4RFHLPXIGA5VrV91Nip/gpbg4aZ0iuLN3JV1csICgMD") format(woff2);
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Minecraft Ten;
+  src: url("data:font/woff2;base64,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") format(woff2);
+  ascent-override: 85%;
+  descent-override: 15%;
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  line-gap-override: 0%;
+}
+
+:root {
+  --ore-font-body: "Minecraft", "Noto Sans", "GNU Unifont", sans-serif;
+  --ore-font-display: "Minecraft Ten", "Minecraft", "Noto Sans", sans-serif;
+  --ore-font-size-body: 1rem;
+  --ore-line-height-body: 1.25;
+  --ore-size-pixel: .0625rem;
+  --ore-size-unit: calc(var(--ore-size-pixel) * 2);
+  --ore-motion-fast: .1s;
+  --ore-color-green-10: #a0e081;
+  --ore-color-green-20: #86d562;
+  --ore-color-green-30: #6cc349;
+  --ore-color-green-40: #52a535;
+  --ore-color-green-50: #3c8527;
+  --ore-color-green-60: #2a641c;
+  --ore-color-green-70: #1d4d13;
+  --ore-color-green-80: #153a0e;
+  --ore-color-green-90: #112f0b;
+  --ore-color-green-100: #0f2b0a;
+  --ore-color-red-10: #f46d6d;
+  --ore-color-red-20: #ea5e5e;
+  --ore-color-red-30: #df5050;
+  --ore-color-red-40: #d54242;
+  --ore-color-red-50: #ca3636;
+  --ore-color-red-60: #c02d2d;
+  --ore-color-red-70: #b62525;
+  --ore-color-red-80: #ad1d1d;
+  --ore-color-red-90: #a31616;
+  --ore-color-red-100: #990f0f;
+  --ore-color-blue-10: #8cb3ff;
+  --ore-color-blue-20: #2e6be5;
+  --ore-color-blue-30: #1452cc;
+  --ore-color-yellow-10: #ffe866;
+  --ore-color-yellow-20: #e5c317;
+  --ore-color-yellow-30: #8a7500;
+  --ore-color-orange-10: #ffb366;
+  --ore-color-orange-20: #d3791f;
+  --ore-color-orange-30: #a65b11;
+  --ore-color-purple-10: #ac90f3;
+  --ore-color-purple-20: #9471e0;
+  --ore-color-purple-40: #8557f8;
+  --ore-color-purple-50: #7345e5;
+  --ore-color-purple-60: #5d2cc6;
+  --ore-color-purple-70: #4a1cac;
+  --ore-color-purple-100: #050029;
+  --ore-color-legends-10: #c4f5fe;
+  --ore-color-legends-20: #bdf5ff;
+  --ore-color-legends-30: #acf2ff;
+  --ore-color-legends-40: #70dfff;
+  --ore-color-legends-50: #339bd6;
+  --ore-color-gold-10: #ffe175;
+  --ore-color-gold-20: #ffd953;
+  --ore-color-gold-30: #ffc42b;
+  --ore-color-gold-40: #db9f21;
+  --ore-color-gold-50: #a47b2a;
+  --ore-color-white: #fff;
+  --ore-color-gray-10: #f4f6f9;
+  --ore-color-gray-20: #e6e8eb;
+  --ore-color-gray-30: #d0d1d4;
+  --ore-color-gray-40: #b1b2b5;
+  --ore-color-gray-50: #8c8d90;
+  --ore-color-gray-60: #58585a;
+  --ore-color-gray-70: #48494a;
+  --ore-color-gray-80: #313233;
+  --ore-color-gray-90: #242425;
+  --ore-color-gray-100: #1e1e1f;
+  --ore-color-black: #000;
+  --ore-color-black-opacity-10: #0000001a;
+  --ore-color-black-opacity-20: #0003;
+  --ore-color-black-opacity-30: #0000004d;
+  --ore-color-black-opacity-40: #0006;
+  --ore-color-black-opacity-50: #00000080;
+  --ore-color-black-opacity-60: #0009;
+  --ore-color-black-opacity-70: #000000b3;
+  --ore-color-black-opacity-80: #000c;
+  --ore-color-black-opacity-90: #000000e6;
+  --ore-color-white-opacity-10: #ffffff1a;
+  --ore-color-white-opacity-20: #fff3;
+  --ore-color-white-opacity-30: #ffffff4d;
+  --ore-color-white-opacity-40: #fff6;
+  --ore-color-white-opacity-50: #ffffff80;
+  --ore-color-white-opacity-60: #fff9;
+  --ore-color-white-opacity-70: #ffffffb3;
+  --ore-color-white-opacity-80: #fffc;
+  --ore-color-white-opacity-90: #ffffffe6;
+  --ore-color-dungeons-10: #ffd953;
+  --ore-color-dungeons-20: #ffb64c;
+  --ore-color-dungeons-30: #ffa41f;
+  --ore-color-dungeons-40: #ff791a;
+  --ore-color-dungeons-50: #de7523;
+  --ore-color-foreground: var(--ore-color-white);
+  --ore-color-border: var(--ore-color-gray-100);
+  --ore-color-focus-ring: var(--ore-color-white);
+  --ore-color-disabled: var(--ore-color-gray-30);
+  --ore-color-disabled-shadow: var(--ore-color-gray-40);
+  --ore-color-disabled-foreground: var(--ore-color-gray-70);
+  --ore-color-disabled-foreground-dim: var(--ore-color-gray-50);
+  --ore-color-disabled-border: var(--ore-color-gray-50);
+  --ore-color-primary-background: var(--ore-color-green-50);
+  --ore-color-primary-background-hover: var(--ore-color-green-40);
+  --ore-color-primary-background-pressed: var(--ore-color-green-60);
+  --ore-color-primary-highlight: color-mix(in srgb, var(--ore-color-primary-background), var(--ore-color-white) 20%);
+  --ore-color-primary-highlight-hover: color-mix(in srgb, var(--ore-color-primary-background-hover), var(--ore-color-white) 20%);
+  --ore-color-primary-highlight-pressed: color-mix(in srgb, var(--ore-color-primary-background-pressed), var(--ore-color-white) 10%);
+  --ore-color-primary-shadow: var(--ore-color-green-70);
+  --ore-color-secondary-background: var(--ore-color-gray-30);
+  --ore-color-secondary-background-hover: var(--ore-color-gray-10);
+  --ore-color-secondary-background-pressed: var(--ore-color-gray-40);
+  --ore-color-secondary-highlight: color-mix(in srgb, var(--ore-color-secondary-background), var(--ore-color-white) 40%);
+  --ore-color-secondary-highlight-hover: color-mix(in srgb, var(--ore-color-secondary-background-hover), var(--ore-color-white) 80%);
+  --ore-color-secondary-highlight-pressed: color-mix(in srgb, var(--ore-color-secondary-background-pressed), var(--ore-color-white) 20%);
+  --ore-color-secondary-shadow: var(--ore-color-gray-60);
+  --ore-color-dungeons-background: var(--ore-color-dungeons-30);
+  --ore-color-dungeons-background-hover: var(--ore-color-dungeons-20);
+  --ore-color-dungeons-background-pressed: var(--ore-color-dungeons-40);
+  --ore-color-dungeons-highlight: var(--ore-color-dungeons-10);
+  --ore-color-dungeons-shadow: var(--ore-color-dungeons-50);
+  --ore-color-legends-background: var(--ore-color-legends-30);
+  --ore-color-legends-background-hover: var(--ore-color-legends-20);
+  --ore-color-legends-background-pressed: var(--ore-color-legends-40);
+  --ore-color-legends-highlight: var(--ore-color-legends-10);
+  --ore-color-legends-shadow: var(--ore-color-legends-50);
+  --ore-color-gold-background: var(--ore-color-gold-30);
+  --ore-color-gold-background-hover: var(--ore-color-gold-10);
+  --ore-color-gold-background-pressed: var(--ore-color-gold-40);
+  --ore-color-gold-highlight: var(--ore-color-gold-20);
+  --ore-color-gold-shadow: var(--ore-color-gold-50);
+  --ore-color-realms-background: var(--ore-color-purple-50);
+  --ore-color-realms-background-hover: var(--ore-color-purple-40);
+  --ore-color-realms-background-pressed: var(--ore-color-purple-60);
+  --ore-color-realms-highlight: var(--ore-color-purple-40);
+  --ore-color-realms-shadow: var(--ore-color-purple-70);
+  --ore-color-neutral-background: var(--ore-color-gray-70);
+  --ore-color-neutral-background-hover: var(--ore-color-gray-60);
+  --ore-color-neutral-background-pressed: var(--ore-color-gray-80);
+  --ore-color-neutral-highlight: color-mix(in srgb, var(--ore-color-neutral-background), var(--ore-color-white) 20%);
+  --ore-color-neutral-highlight-hover: color-mix(in srgb, var(--ore-color-neutral-background-hover), var(--ore-color-white) 20%);
+  --ore-color-neutral-highlight-pressed: color-mix(in srgb, var(--ore-color-neutral-background-pressed), var(--ore-color-white) 20%);
+  --ore-color-neutral-shadow: var(--ore-color-gray-80);
+  --ore-color-neutral-text: var(--ore-color-white);
+  --ore-color-neutral-text-dim: var(--ore-color-gray-30);
+  --ore-color-neutral-text-dimmer: var(--ore-color-gray-40);
+  --ore-color-neutral-border: var(--ore-color-gray-100);
+  --ore-color-neutral-surface: var(--ore-color-gray-70);
+  --ore-color-neutral-surface-raised: var(--ore-color-gray-80);
+  --ore-color-neutral-surface-sunken: var(--ore-color-gray-90);
+  --ore-color-neutral-surface-deep: var(--ore-color-gray-100);
+  --ore-color-neutral-specular: color-mix(in srgb, var(--ore-color-neutral-surface), var(--ore-color-white) 20%);
+  --ore-color-neutral-bevel-shadow: color-mix(in srgb, var(--ore-color-neutral-surface), var(--ore-color-black) 30%);
+  --ore-color-neutral-corner: #49494b;
+  --ore-color-neutral-divider: color-mix(in srgb, var(--ore-color-neutral-surface), var(--ore-color-black) 5%);
+  --ore-color-neutral-50-background: var(--ore-color-gray-50);
+  --ore-color-neutral-50-background-hover: var(--ore-color-gray-40);
+  --ore-color-neutral-50-background-pressed: var(--ore-color-gray-60);
+  --ore-color-neutral-50-highlight: color-mix(in srgb, var(--ore-color-neutral-50-background), var(--ore-color-white) 10%);
+  --ore-color-neutral-50-highlight-hover: color-mix(in srgb, var(--ore-color-neutral-50-background-hover), var(--ore-color-white) 10%);
+  --ore-color-neutral-50-highlight-pressed: color-mix(in srgb, var(--ore-color-neutral-50-background-pressed), var(--ore-color-white) 10%);
+  --ore-color-neutral-50-highlight-focus: color-mix(in srgb, var(--ore-color-neutral-50-background), var(--ore-color-white) 20%);
+  --ore-color-destructive-background: var(--ore-color-red-50);
+  --ore-color-destructive-background-hover: var(--ore-color-red-30);
+  --ore-color-destructive-background-pressed: var(--ore-color-red-60);
+  --ore-color-destructive-highlight: color-mix(in srgb, var(--ore-color-destructive-background), var(--ore-color-white) 10%);
+  --ore-color-destructive-highlight-hover: color-mix(in srgb, var(--ore-color-destructive-background-hover), var(--ore-color-white) 10%);
+  --ore-color-destructive-highlight-pressed: color-mix(in srgb, var(--ore-color-destructive-background-pressed), var(--ore-color-white) 10%);
+  --ore-color-destructive-shadow: var(--ore-color-red-80);
+  --ore-color-primary-tint-background: var(--ore-color-green-30);
+  --ore-color-primary-tint-foreground: var(--ore-color-gray-100);
+  --ore-color-success-background: var(--ore-color-green-50);
+  --ore-color-success-foreground: var(--ore-color-white);
+  --ore-color-success-tint-background: var(--ore-color-green-10);
+  --ore-color-success-tint-foreground: var(--ore-color-gray-100);
+  --ore-color-informative-background: var(--ore-color-blue-20);
+  --ore-color-informative-foreground: var(--ore-color-white);
+  --ore-color-informative-tint-background: var(--ore-color-blue-10);
+  --ore-color-informative-tint-foreground: var(--ore-color-gray-100);
+  --ore-color-notice-background: var(--ore-color-orange-20);
+  --ore-color-notice-tint-background: var(--ore-color-yellow-10);
+  --ore-color-notice-tint-foreground: var(--ore-color-gray-100);
+  --ore-color-destructive-tint-background: var(--ore-color-red-10);
+  --ore-color-destructive-tint-foreground: var(--ore-color-gray-100);
+  --ore-color-realms-tint-background: var(--ore-color-purple-10);
+  --ore-color-realms-informative-background: var(--ore-color-purple-100);
+  --ore-color-realms-informative-tint-background: var(--ore-color-purple-10);
+  --ore-color-overlay: color-mix(in srgb, var(--ore-color-black) 65%, transparent);
+  --ore-color-text-shadow: var(--ore-color-black-opacity-30);
+  --ore-color-nav-background: #e7e8ec;
+  --ore-color-nav-shadow: #b1b2b6;
+  --ore-color-nav-drop-shadow: color-mix(in srgb, var(--ore-color-gray-100) 65%, transparent);
+  --ore-color-nav-action-highlight: var(--ore-color-white);
+  --ore-color-nav-action-shadow: #a1a2a4;
+}
+
+@layer components {
+  :where(ore-accordion, ore-button, ore-card, ore-checkbox, ore-container, ore-table, ore-dropdown, ore-icon-button, ore-modal, ore-navbar, ore-progress-bar, ore-radio, ore-radio-group, ore-scrollbar, ore-slider, ore-spinner, ore-switch, ore-tab-bar, ore-tab-button, ore-tag, ore-textfield, ore-toggles, ore-tooltip) {
+    box-sizing: border-box;
+    font: inherit;
+  }
+
+  :where(ore-icon) {
+    display: inline-block;
+    overflow: hidden;
+    box-sizing: border-box;
+    color: inherit;
+    vertical-align: -.125em;
+    width: 1em;
+    height: 1em;
+    line-height: 1;
+  }
+
+  :where(ore-icon > svg) {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  :where(ore-button, ore-checkbox, ore-icon-button, ore-radio, ore-switch, ore-tab-button, ore-dropdown .ore-dropdown-item, ore-modal .ore-modal-header-button, ore-navbar .ore-navbar-button, ore-navbar .ore-navbar-action) {
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  :where(ore-slider, ore-slider > input[type="range"]) {
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  :where(ore-textfield, ore-textfield .ore-textfield-input) {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  :where(ore-slider:not([orientation="vertical"]) > input[type="range"]) {
+    touch-action: pan-y;
+  }
+
+  :where(ore-slider[orientation="vertical"] > input[type="range"]) {
+    touch-action: pan-x;
+  }
+
+  :where(ore-accordion) {
+    --ore-accordion-unit: var(--ore-size-unit);
+    --ore-accordion-border: var(--ore-color-neutral-border);
+    --ore-accordion-background: var(--ore-color-neutral-surface);
+    --ore-accordion-foreground: var(--ore-color-foreground);
+    --ore-accordion-content-foreground: var(--ore-color-neutral-text-dim);
+    display: block;
+    width: min(100%, calc(var(--ore-accordion-unit) * 200));
+    color: var(--ore-accordion-foreground);
+    font-family: var(--ore-font-body);
+  }
+
+  :where(ore-accordion > .ore-accordion-trigger) {
+    --ore-icon-button-width: calc(100% - var(--ore-accordion-unit) * 2);
+    --ore-icon-button-height: auto;
+    --ore-icon-button-padding: var(--ore-accordion-unit) calc(var(--ore-accordion-unit) * 8);
+    --ore-icon-button-place-items: center stretch;
+    --ore-icon-button-box-shadow: 0 0 0 var(--ore-accordion-unit) var(--ore-accordion-border);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items:  center;
+    gap: calc(var(--ore-accordion-unit) * 4);
+    min-height: calc(var(--ore-accordion-unit) * 20);
+    margin-inline: var(--ore-accordion-unit);
+    text-align: left;
+  }
+
+  :where(ore-accordion > .ore-accordion-trigger > .ore-accordion-title) {
+    overflow-wrap: anywhere;
+    font-size: calc(var(--ore-accordion-unit) * 7);
+    line-height: calc(var(--ore-accordion-unit) * 8);
+    min-width: 0;
+  }
+
+  :where(ore-accordion > .ore-accordion-trigger):after {
+    width: calc(var(--ore-accordion-unit) * 6);
+    height: calc(var(--ore-accordion-unit) * 6);
+    mask: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCA4IDgiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMS41IDMuNXYtMWgtMXYxem0wIDBoMXYxaC0xem02LTF2MWgtMXYuOTY2aC0xdi0xaDFWMi41em0tNCAzdi0xaC0xdjF6bTEgMGgtMXYxaDF6bTAgMHYtMWgxdjF6IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIC0uNSkiLz48L3N2Zz4=") center / contain no-repeat;
+    content: "";
+    background: currentColor;
+  }
+
+  :where(ore-accordion[open] > .ore-accordion-trigger):after {
+    mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCA4IDgiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNNi41IDUuNXYxaDF2LTF6bTAgMGgtMXYtMWgxem0tNiAxdi0xaDF2LS45NjZoMXYxaC0xVjYuNXptNC0zdjFoMXYtMXptLTEgMGgxdi0xaC0xem0wIDB2MWgtMXYtMXoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgLS41KSIvPjwvc3ZnPgo=");
+  }
+
+  :where(ore-accordion[open] > .ore-accordion-trigger) {
+    --ore-icon-button-background: var(--ore-color-neutral-background-pressed);
+    --ore-icon-button-highlight: var(--ore-color-neutral-shadow);
+    --ore-icon-button-shadow-color: var(--ore-color-neutral-highlight-pressed);
+    --ore-icon-button-corner: var(--ore-color-neutral-background);
+  }
+
+  :where(ore-accordion > .ore-accordion-content) {
+    box-sizing: border-box;
+    padding: calc(var(--ore-accordion-unit) * 4) calc(var(--ore-accordion-unit) * 8);
+    border: var(--ore-accordion-unit) solid var(--ore-accordion-border);
+    color: var(--ore-accordion-content-foreground);
+    background: var(--ore-accordion-background);
+    font-size: calc(var(--ore-accordion-unit) * 6);
+    line-height: calc(var(--ore-accordion-unit) * 7);
+    border-top: 0;
+  }
+
+  :where(ore-accordion > .ore-accordion-content[hidden]) {
+    display: none;
+  }
+
+  :where(ore-button, ore-tab-button) {
+    --ore-button-unit: var(--ore-size-unit);
+    --ore-button-background-default: var(--ore-color-primary-background);
+    --ore-button-background-hover: var(--ore-color-primary-background-hover);
+    --ore-button-background-pressed: var(--ore-color-primary-background-pressed);
+    --ore-button-highlight-default: var(--ore-color-primary-highlight);
+    --ore-button-highlight-hover: var(--ore-color-primary-highlight-hover);
+    --ore-button-highlight-pressed: var(--ore-color-primary-highlight-pressed);
+    --ore-button-background: var(--ore-button-background-default);
+    --ore-button-highlight: var(--ore-button-highlight-default);
+    --ore-button-border: var(--ore-color-border);
+    --ore-button-shadow: var(--ore-color-primary-shadow);
+    --ore-button-foreground: var(--ore-color-foreground);
+    --ore-button-font-family: var(--ore-font-body);
+    --ore-button-font-size: calc(var(--ore-button-unit) * 7);
+    --ore-button-text-shadow: none;
+    --ore-button-face-offset: 0px;
+    display: inline-flex;
+    box-sizing: border-box;
+    min-width: calc(var(--ore-button-unit) * 64);
+    min-height: calc(var(--ore-button-unit) * 22);
+    padding: 0 calc(var(--ore-button-unit) * 8) calc(var(--ore-button-unit) * 2);
+    color: var(--ore-button-foreground);
+    background: linear-gradient(var(--ore-button-border), var(--ore-button-border)) center var(--ore-button-face-offset) / 100% var(--ore-button-unit) no-repeat, linear-gradient(var(--ore-button-border), var(--ore-button-border)) center bottom / 100% var(--ore-button-unit) no-repeat, linear-gradient(var(--ore-button-border), var(--ore-button-border)) left var(--ore-button-face-offset) / var(--ore-button-unit) calc(100% - var(--ore-button-face-offset)) no-repeat, linear-gradient(var(--ore-button-border), var(--ore-button-border)) right var(--ore-button-face-offset) / var(--ore-button-unit) calc(100% - var(--ore-button-face-offset)) no-repeat, linear-gradient(var(--ore-button-shadow), var(--ore-button-shadow)) center calc(100% - var(--ore-button-unit)) / calc(100% - var(--ore-button-unit) * 2) calc(var(--ore-button-unit) * 2) no-repeat, linear-gradient(var(--ore-button-highlight), var(--ore-button-highlight)) center calc(var(--ore-button-unit)  + var(--ore-button-face-offset)) / calc(100% - var(--ore-button-unit) * 2) var(--ore-button-unit) no-repeat, linear-gradient(var(--ore-button-highlight), var(--ore-button-highlight)) center calc(100% - var(--ore-button-unit) * 3 + var(--ore-button-face-offset)) / calc(100% - var(--ore-button-unit) * 2) var(--ore-button-unit) no-repeat, linear-gradient(var(--ore-button-highlight), var(--ore-button-highlight)) left calc(var(--ore-button-unit)  + var(--ore-button-face-offset)) / calc(var(--ore-button-unit) * 2) calc(100% - var(--ore-button-unit) * 4 - 1px) no-repeat, linear-gradient(var(--ore-button-highlight), var(--ore-button-highlight)) right calc(var(--ore-button-unit)  + var(--ore-button-face-offset)) / calc(var(--ore-button-unit) * 2) calc(100% - var(--ore-button-unit) * 4 - 1px) no-repeat, linear-gradient(var(--ore-button-background), var(--ore-button-background)) center var(--ore-button-face-offset) / 100% calc(100% - var(--ore-button-face-offset)) no-repeat;
+    font-family: var(--ore-button-font-family);
+    font-size: var(--ore-button-font-size);
+    text-align: center;
+    text-shadow: var(--ore-button-text-shadow);
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    justify-content: center;
+    align-items:  center;
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  :where(ore-button, ore-tab-button):before {
+    position: absolute;
+    top: var(--ore-button-face-offset);
+    box-shadow: inset 0 0 0 var(--ore-button-unit) var(--ore-button-border);
+    content: "";
+    pointer-events: none;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  :where(ore-button) {
+    position: relative;
+  }
+
+  :where(ore-button > .ore-button-link) {
+    position: absolute;
+    z-index: 1;
+    color: inherit;
+    text-decoration: none;
+    inset: 0;
+  }
+
+  :where(ore-button > .ore-button-prefix) {
+    margin-inline-end: calc(var(--ore-button-unit) * 4);
+  }
+
+  :where(ore-button > .ore-button-suffix) {
+    margin-inline-start: calc(var(--ore-button-unit) * 4);
+  }
+
+  :where(ore-button > .ore-button-spinner) {
+    position: absolute;
+    z-index: 2;
+    width: calc(var(--ore-button-unit) * 8);
+    height: calc(var(--ore-button-unit) * 8);
+    color: var(--ore-button-foreground);
+  }
+
+  :where(ore-button[loading]) {
+    color: #0000;
+    text-shadow: none;
+    cursor: wait;
+  }
+
+  :where(ore-button[loading] > :not(:-webkit-any(.ore-button-spinner, .ore-button-link))) {
+    visibility: hidden;
+  }
+
+  :where(ore-button[loading] > :not(:-moz-any(.ore-button-spinner, .ore-button-link))) {
+    visibility: hidden;
+  }
+
+  :where(ore-button[loading] > :not(:is(.ore-button-spinner, .ore-button-link))) {
+    visibility: hidden;
+  }
+
+  :where(ore-button[loading] > .ore-button-spinner) {
+    color: var(--ore-button-foreground);
+  }
+
+  :where(ore-button[variant="hero"]) {
+    --ore-button-font-family: var(--ore-font-display);
+    --ore-button-font-size: calc(var(--ore-button-unit) * 9);
+    --ore-button-text-shadow: var(--ore-button-unit) var(--ore-button-unit) var(--ore-color-text-shadow);
+  }
+
+  :where(ore-button[color="secondary"]) {
+    --ore-button-background-default: var(--ore-color-secondary-background);
+    --ore-button-background-hover: var(--ore-color-secondary-background-hover);
+    --ore-button-background-pressed: var(--ore-color-secondary-background-pressed);
+    --ore-button-highlight-default: var(--ore-color-secondary-highlight);
+    --ore-button-highlight-hover: var(--ore-color-secondary-highlight-hover);
+    --ore-button-highlight-pressed: var(--ore-color-secondary-highlight-pressed);
+    --ore-button-shadow: var(--ore-color-secondary-shadow);
+    --ore-button-foreground: var(--ore-color-border);
+  }
+
+  :where(ore-button[color="destructive"]) {
+    --ore-button-background-default: var(--ore-color-destructive-background);
+    --ore-button-background-hover: var(--ore-color-destructive-background-hover);
+    --ore-button-background-pressed: var(--ore-color-destructive-background-pressed);
+    --ore-button-highlight-default: var(--ore-color-destructive-highlight);
+    --ore-button-highlight-hover: var(--ore-color-destructive-highlight-hover);
+    --ore-button-highlight-pressed: var(--ore-color-destructive-highlight-pressed);
+    --ore-button-shadow: var(--ore-color-destructive-shadow);
+  }
+
+  :where(ore-button[color="dungeons"], ore-button[color="legends"], ore-button[color="gold"], ore-button[color="realms"]) {
+    --ore-button-background-default: var(--ore-color-dungeons-background);
+    --ore-button-background-hover: var(--ore-color-dungeons-background-hover);
+    --ore-button-background-pressed: var(--ore-color-dungeons-background-pressed);
+    --ore-button-highlight-default: var(--ore-color-dungeons-highlight);
+    --ore-button-highlight-hover: var(--ore-color-dungeons-highlight);
+    --ore-button-highlight-pressed: var(--ore-color-dungeons-highlight);
+    --ore-button-shadow: var(--ore-color-dungeons-shadow);
+    --ore-button-foreground: var(--ore-color-gray-100);
+  }
+
+  :where(ore-button[color="legends"]) {
+    --ore-button-background-default: var(--ore-color-legends-background);
+    --ore-button-background-hover: var(--ore-color-legends-background-hover);
+    --ore-button-background-pressed: var(--ore-color-legends-background-pressed);
+    --ore-button-highlight-default: var(--ore-color-legends-highlight);
+    --ore-button-highlight-hover: var(--ore-color-legends-highlight);
+    --ore-button-highlight-pressed: var(--ore-color-legends-highlight);
+    --ore-button-shadow: var(--ore-color-legends-shadow);
+    --ore-button-foreground: var(--ore-color-gray-100);
+  }
+
+  :where(ore-button[color="gold"]) {
+    --ore-button-background-default: var(--ore-color-gold-background);
+    --ore-button-background-hover: var(--ore-color-gold-background-hover);
+    --ore-button-background-pressed: var(--ore-color-gold-background-pressed);
+    --ore-button-highlight-default: var(--ore-color-gold-highlight);
+    --ore-button-highlight-hover: var(--ore-color-gold-highlight);
+    --ore-button-highlight-pressed: var(--ore-color-gold-highlight);
+    --ore-button-shadow: var(--ore-color-gold-shadow);
+    --ore-button-foreground: var(--ore-color-gray-100);
+  }
+
+  :where(ore-button[color="realms"]) {
+    --ore-button-background-default: var(--ore-color-realms-background);
+    --ore-button-background-hover: var(--ore-color-realms-background-hover);
+    --ore-button-background-pressed: var(--ore-color-realms-background-pressed);
+    --ore-button-highlight-default: var(--ore-color-realms-highlight);
+    --ore-button-highlight-hover: var(--ore-color-realms-highlight);
+    --ore-button-highlight-pressed: var(--ore-color-realms-highlight);
+    --ore-button-shadow: var(--ore-color-realms-shadow);
+    --ore-button-foreground: var(--ore-color-white);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    :where(ore-button, ore-tab-button):hover:not(:-webkit-any([disabled], [form-disabled], [loading])) {
+      --ore-button-background: var(--ore-button-background-hover);
+      --ore-button-highlight: var(--ore-button-highlight-hover);
+    }
+
+    :where(ore-button, ore-tab-button):hover:not(:-moz-any([disabled], [form-disabled], [loading])) {
+      --ore-button-background: var(--ore-button-background-hover);
+      --ore-button-highlight: var(--ore-button-highlight-hover);
+    }
+
+    :where(ore-button, ore-tab-button):hover:not(:is([disabled], [form-disabled], [loading])) {
+      --ore-button-background: var(--ore-button-background-hover);
+      --ore-button-highlight: var(--ore-button-highlight-hover);
+    }
+  }
+
+  :where(:-webkit-any(ore-button, ore-tab-button):active:not(:-webkit-any([disabled], [form-disabled], [loading])), :-webkit-any(ore-button, ore-tab-button)[pressed]:not(:-webkit-any([disabled], [form-disabled], [loading]))) {
+    --ore-button-background: var(--ore-button-background-pressed);
+    --ore-button-highlight: var(--ore-button-highlight-pressed);
+    --ore-button-shadow: transparent;
+    --ore-button-face-offset: calc(var(--ore-button-unit) * 2);
+    padding-top: var(--ore-button-face-offset);
+    padding-bottom: 0;
+  }
+
+  :where(:-moz-any(ore-button, ore-tab-button):active:not(:-moz-any([disabled], [form-disabled], [loading])), :-moz-any(ore-button, ore-tab-button)[pressed]:not(:-moz-any([disabled], [form-disabled], [loading]))) {
+    --ore-button-background: var(--ore-button-background-pressed);
+    --ore-button-highlight: var(--ore-button-highlight-pressed);
+    --ore-button-shadow: transparent;
+    --ore-button-face-offset: calc(var(--ore-button-unit) * 2);
+    padding-top: var(--ore-button-face-offset);
+    padding-bottom: 0;
+  }
+
+  :where(:is(ore-button, ore-tab-button):active:not(:is([disabled], [form-disabled], [loading])), :is(ore-button, ore-tab-button)[pressed]:not(:is([disabled], [form-disabled], [loading]))) {
+    --ore-button-background: var(--ore-button-background-pressed);
+    --ore-button-highlight: var(--ore-button-highlight-pressed);
+    --ore-button-shadow: transparent;
+    --ore-button-face-offset: calc(var(--ore-button-unit) * 2);
+    padding-top: var(--ore-button-face-offset);
+    padding-bottom: 0;
+  }
+
+  :where(ore-button, ore-tab-button):focus-visible {
+    outline: none;
+  }
+
+  :where(ore-button > .ore-button-link):focus-visible {
+    outline: none;
+  }
+
+  :where(ore-button, ore-tab-button):focus-visible:before {
+    box-shadow: inset 0 0 0 var(--ore-button-unit) var(--ore-color-focus-ring), inset 0 0 0 calc(var(--ore-button-unit) * 2) var(--ore-button-border);
+  }
+
+  :where(ore-button:has( > .ore-button-link:focus-visible)):before {
+    box-shadow: inset 0 0 0 var(--ore-button-unit) var(--ore-color-focus-ring), inset 0 0 0 calc(var(--ore-button-unit) * 2) var(--ore-button-border);
+  }
+
+  :where(ore-button[disabled], ore-button[form-disabled], ore-tab-button[disabled], ore-tab-button[form-disabled]) {
+    --ore-button-background: var(--ore-color-disabled);
+    --ore-button-highlight: var(--ore-color-disabled);
+    --ore-button-border: var(--ore-color-disabled-border);
+    --ore-button-shadow: var(--ore-color-secondary-background-pressed);
+    color: var(--ore-color-disabled-foreground);
+    --ore-button-text-shadow: none;
+    cursor: not-allowed;
+  }
+
+  :where(ore-card) {
+    --ore-card-unit: var(--ore-size-unit);
+    --ore-card-border: var(--ore-color-border);
+    --ore-card-background: var(--ore-color-neutral-surface);
+    --ore-card-highlight: var(--ore-color-neutral-specular);
+    --ore-card-shadow: var(--ore-color-neutral-bevel-shadow);
+    --ore-card-foreground: var(--ore-color-foreground);
+    --ore-card-description: var(--ore-color-disabled);
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    box-sizing: border-box;
+    width: min(100%, calc(var(--ore-card-unit) * 148));
+    row-gap: var(--ore-card-unit);
+    color: var(--ore-card-foreground);
+    background: var(--ore-card-shadow);
+    box-shadow: 0 0 0 var(--ore-card-unit) var(--ore-card-border);
+    font-family: var(--ore-font-body);
+  }
+
+  :where(ore-card > .ore-card-media) {
+    position: relative;
+    z-index: 2;
+    aspect-ratio: 16 / 9;
+    background: var(--ore-color-black);
+    min-width: 0;
+  }
+
+  :where(ore-card > .ore-card-media):after {
+    position: absolute;
+    z-index: 1;
+    box-shadow: 0 0 0 var(--ore-card-unit) var(--ore-card-border);
+    content: "";
+    pointer-events: none;
+    inset: 0;
+  }
+
+  :where(ore-card > .ore-card-media > img) {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  :where(ore-card .ore-card-overlay-top-start, ore-card .ore-card-overlay-bottom-start, ore-card .ore-card-overlay-top-end) {
+    position: absolute;
+    z-index: 3;
+  }
+
+  :where(ore-card .ore-card-overlay-top-start) {
+    top: 0;
+    left: 0;
+  }
+
+  :where(ore-card .ore-card-overlay-bottom-start) {
+    bottom: 0;
+    left: 0;
+  }
+
+  :where(ore-card .ore-card-overlay-top-end) {
+    top: 0;
+    right: 0;
+  }
+
+  :where(ore-card > .ore-card-body) {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    box-sizing: border-box;
+    min-height: calc(var(--ore-card-unit) * 29.25);
+    border-top: var(--ore-card-unit) solid var(--ore-card-highlight);
+    border-right: var(--ore-card-unit) solid var(--ore-card-shadow);
+    border-bottom: var(--ore-card-unit) solid var(--ore-card-shadow);
+    border-left: var(--ore-card-unit) solid var(--ore-card-highlight);
+    background: var(--ore-card-background);
+    align-items: stretch;
+    min-width: 0;
+  }
+
+  :where(ore-card .ore-card-caption) {
+    display: grid;
+    padding: 0 calc(var(--ore-card-unit) * 6.35);
+    align-content:  center;
+    min-width: 0;
+  }
+
+  :where(ore-card .ore-card-title) {
+    overflow: hidden;
+    font-size: calc(var(--ore-card-unit) * 8);
+    line-height: calc(var(--ore-card-unit) * 10);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  :where(ore-card .ore-card-description) {
+    overflow: hidden;
+    color: var(--ore-card-description);
+    font-size: calc(var(--ore-card-unit) * 6);
+    line-height: calc(var(--ore-card-unit) * 7);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  :where(ore-card .ore-card-meta) {
+    font-size: calc(var(--ore-card-unit) * 6);
+    line-height: calc(var(--ore-card-unit) * 7);
+    white-space: nowrap;
+    align-self:  center;
+    margin-inline-start: auto;
+    padding-inline-end: calc(var(--ore-card-unit) * 3.35);
+  }
+
+  :where(ore-card .ore-card-action) {
+    --ore-icon-button-width: calc(var(--ore-card-unit) * 29.25);
+    --ore-icon-button-height: calc(100% + var(--ore-card-unit) * 2);
+    --ore-icon-button-box-shadow: calc(var(--ore-card-unit) * -1) 0 0 var(--ore-icon-button-border);
+    flex: 0 0 calc(var(--ore-card-unit) * 29.25);
+    align-self: stretch;
+    margin-block-start: calc(var(--ore-card-unit) * -1);
+    margin-block-end: calc(var(--ore-card-unit) * -1);
+    margin-inline-start: auto;
+    margin-inline-end: calc(var(--ore-card-unit) * -1);
+  }
+
+  :where(ore-card .ore-card-action > ore-icon) {
+    width: calc(var(--ore-card-unit) * 10);
+    height: calc(var(--ore-card-unit) * 10);
+  }
+
+  :where(ore-card .ore-card-overlay-top-end) {
+    display: grid;
+    box-sizing: border-box;
+    width: calc(var(--ore-card-unit) * 18);
+    height: calc(var(--ore-card-unit) * 18);
+    color: var(--ore-card-foreground);
+    background: var(--ore-color-neutral-surface-raised);
+    box-shadow: 0 0 0 var(--ore-card-unit) var(--ore-card-border);
+    place-items:  center;
+  }
+
+  :where(ore-card .ore-card-overlay-top-end > ore-icon) {
+    width: calc(var(--ore-card-unit) * 8);
+    height: calc(var(--ore-card-unit) * 8);
+  }
+
+  :where(ore-checkbox) {
+    --ore-checkbox-unit: var(--ore-size-unit);
+    --ore-checkbox-background: var(--ore-color-neutral-50-background);
+    --ore-checkbox-highlight: var(--ore-color-neutral-50-highlight);
+    --ore-checkbox-border: var(--ore-color-border);
+    --ore-checkbox-indicator: var(--ore-color-foreground);
+    --ore-checkbox-active-background: var(--ore-color-primary-background);
+    --ore-checkbox-active-background-hover: var(--ore-color-primary-background-hover);
+    --ore-checkbox-active-background-pressed: var(--ore-color-primary-background-pressed);
+    --ore-checkbox-active-highlight: var(--ore-color-primary-highlight);
+    --ore-checkbox-active-highlight-hover: var(--ore-color-primary-highlight-hover);
+    --ore-checkbox-active-highlight-pressed: var(--ore-color-primary-highlight-pressed);
+    position: relative;
+    display: inline-flex;
+    align-items:  center;
+    gap: calc(var(--ore-checkbox-unit) * 4);
+    min-height: calc(var(--ore-checkbox-unit) * 12);
+    color: var(--ore-color-border);
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  :where(ore-checkbox):before {
+    box-sizing: border-box;
+    width: calc(var(--ore-checkbox-unit) * 12);
+    height: calc(var(--ore-checkbox-unit) * 12);
+    background: var(--ore-checkbox-background);
+    box-shadow: inset 0 0 0 var(--ore-checkbox-unit) var(--ore-checkbox-border), inset 0 0 0 calc(var(--ore-checkbox-unit) * 2) var(--ore-checkbox-highlight);
+    content: "";
+    flex: none;
+  }
+
+  :where(ore-checkbox[checked]):after {
+    position: absolute;
+    top: 50%;
+    left: calc(var(--ore-checkbox-unit) * 2);
+    width: calc(var(--ore-checkbox-unit) * 8);
+    height: calc(var(--ore-checkbox-unit) * 8);
+    background: var(--ore-checkbox-indicator);
+    content: "";
+    mask: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCA4IDgiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNOCAxLjAwN0g3djFINnYxSDV2MUg0di45ODZIM3YxSDJ2LTFIMXYtMUgwdjFoMXYxaDF2MWgxdi0xaDF2LS45ODZoMXYtMWgxdi0xaDF2LTFoMXoiLz48L3N2Zz4K") center / contain no-repeat;
+    transform: translateY(-50%);
+  }
+
+  :where(ore-checkbox[checked]) {
+    --ore-checkbox-background: var(--ore-checkbox-active-background);
+    --ore-checkbox-highlight: var(--ore-checkbox-active-highlight);
+  }
+
+  :where(ore-checkbox[color="secondary"], ore-checkbox[color="dungeons"], ore-checkbox[color="legends"], ore-checkbox[color="gold"]) {
+    --ore-checkbox-indicator: var(--ore-color-gray-100);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    :where(ore-checkbox:hover:not(:-webkit-any([disabled], [form-disabled]))) {
+      --ore-checkbox-background: var(--ore-color-neutral-50-background-hover);
+      --ore-checkbox-highlight: var(--ore-color-neutral-50-highlight-hover);
+    }
+
+    :where(ore-checkbox:hover:not(:-moz-any([disabled], [form-disabled]))) {
+      --ore-checkbox-background: var(--ore-color-neutral-50-background-hover);
+      --ore-checkbox-highlight: var(--ore-color-neutral-50-highlight-hover);
+    }
+
+    :where(ore-checkbox:hover:not(:is([disabled], [form-disabled]))) {
+      --ore-checkbox-background: var(--ore-color-neutral-50-background-hover);
+      --ore-checkbox-highlight: var(--ore-color-neutral-50-highlight-hover);
+    }
+
+    :where(ore-checkbox[checked]:hover:not(:-webkit-any([disabled], [form-disabled]))) {
+      --ore-checkbox-background: var(--ore-checkbox-active-background-hover);
+      --ore-checkbox-highlight: var(--ore-checkbox-active-highlight-hover);
+    }
+
+    :where(ore-checkbox[checked]:hover:not(:-moz-any([disabled], [form-disabled]))) {
+      --ore-checkbox-background: var(--ore-checkbox-active-background-hover);
+      --ore-checkbox-highlight: var(--ore-checkbox-active-highlight-hover);
+    }
+
+    :where(ore-checkbox[checked]:hover:not(:is([disabled], [form-disabled]))) {
+      --ore-checkbox-background: var(--ore-checkbox-active-background-hover);
+      --ore-checkbox-highlight: var(--ore-checkbox-active-highlight-hover);
+    }
+  }
+
+  :where(ore-checkbox:active:not(:-webkit-any([disabled], [form-disabled])), ore-checkbox[pressed]:not(:-webkit-any([disabled], [form-disabled]))) {
+    --ore-checkbox-background: var(--ore-color-neutral-50-background-pressed);
+    --ore-checkbox-highlight: var(--ore-color-neutral-50-highlight-pressed);
+  }
+
+  :where(ore-checkbox:active:not(:-moz-any([disabled], [form-disabled])), ore-checkbox[pressed]:not(:-moz-any([disabled], [form-disabled]))) {
+    --ore-checkbox-background: var(--ore-color-neutral-50-background-pressed);
+    --ore-checkbox-highlight: var(--ore-color-neutral-50-highlight-pressed);
+  }
+
+  :where(ore-checkbox:active:not(:is([disabled], [form-disabled])), ore-checkbox[pressed]:not(:is([disabled], [form-disabled]))) {
+    --ore-checkbox-background: var(--ore-color-neutral-50-background-pressed);
+    --ore-checkbox-highlight: var(--ore-color-neutral-50-highlight-pressed);
+  }
+
+  :where(ore-checkbox[checked]:active:not(:-webkit-any([disabled], [form-disabled])), ore-checkbox[checked][pressed]:not(:-webkit-any([disabled], [form-disabled]))) {
+    --ore-checkbox-background: var(--ore-checkbox-active-background-pressed);
+    --ore-checkbox-highlight: var(--ore-checkbox-active-highlight-pressed);
+  }
+
+  :where(ore-checkbox[checked]:active:not(:-moz-any([disabled], [form-disabled])), ore-checkbox[checked][pressed]:not(:-moz-any([disabled], [form-disabled]))) {
+    --ore-checkbox-background: var(--ore-checkbox-active-background-pressed);
+    --ore-checkbox-highlight: var(--ore-checkbox-active-highlight-pressed);
+  }
+
+  :where(ore-checkbox[checked]:active:not(:is([disabled], [form-disabled])), ore-checkbox[checked][pressed]:not(:is([disabled], [form-disabled]))) {
+    --ore-checkbox-background: var(--ore-checkbox-active-background-pressed);
+    --ore-checkbox-highlight: var(--ore-checkbox-active-highlight-pressed);
+  }
+
+  :where(ore-checkbox[color="secondary"]) {
+    --ore-checkbox-active-background: var(--ore-color-secondary-background);
+    --ore-checkbox-active-background-hover: var(--ore-color-secondary-background-hover);
+    --ore-checkbox-active-background-pressed: var(--ore-color-secondary-background-pressed);
+    --ore-checkbox-active-highlight: var(--ore-color-secondary-highlight);
+    --ore-checkbox-active-highlight-hover: var(--ore-color-secondary-highlight-hover);
+    --ore-checkbox-active-highlight-pressed: var(--ore-color-secondary-highlight-pressed);
+  }
+
+  :where(ore-checkbox[color="destructive"]) {
+    --ore-checkbox-active-background: var(--ore-color-destructive-background);
+    --ore-checkbox-active-background-hover: var(--ore-color-destructive-background-hover);
+    --ore-checkbox-active-background-pressed: var(--ore-color-destructive-background-pressed);
+    --ore-checkbox-active-highlight: var(--ore-color-destructive-highlight);
+    --ore-checkbox-active-highlight-hover: var(--ore-color-destructive-highlight-hover);
+    --ore-checkbox-active-highlight-pressed: var(--ore-color-destructive-highlight-pressed);
+  }
+
+  :where(ore-checkbox[color="dungeons"]) {
+    --ore-checkbox-active-background: var(--ore-color-dungeons-background);
+    --ore-checkbox-active-background-hover: var(--ore-color-dungeons-background-hover);
+    --ore-checkbox-active-background-pressed: var(--ore-color-dungeons-background-pressed);
+    --ore-checkbox-active-highlight: var(--ore-color-dungeons-highlight);
+    --ore-checkbox-active-highlight-hover: var(--ore-color-dungeons-highlight);
+    --ore-checkbox-active-highlight-pressed: var(--ore-color-dungeons-highlight);
+  }
+
+  :where(ore-checkbox[color="legends"]) {
+    --ore-checkbox-active-background: var(--ore-color-legends-background);
+    --ore-checkbox-active-background-hover: var(--ore-color-legends-background-hover);
+    --ore-checkbox-active-background-pressed: var(--ore-color-legends-background-pressed);
+    --ore-checkbox-active-highlight: var(--ore-color-legends-highlight);
+    --ore-checkbox-active-highlight-hover: var(--ore-color-legends-highlight);
+    --ore-checkbox-active-highlight-pressed: var(--ore-color-legends-highlight);
+  }
+
+  :where(ore-checkbox[color="realms"]) {
+    --ore-checkbox-active-background: var(--ore-color-realms-background);
+    --ore-checkbox-active-background-hover: var(--ore-color-realms-background-hover);
+    --ore-checkbox-active-background-pressed: var(--ore-color-realms-background-pressed);
+    --ore-checkbox-active-highlight: var(--ore-color-realms-highlight);
+    --ore-checkbox-active-highlight-hover: var(--ore-color-realms-highlight);
+    --ore-checkbox-active-highlight-pressed: var(--ore-color-realms-highlight);
+  }
+
+  :where(ore-checkbox[color="gold"]) {
+    --ore-checkbox-active-background: var(--ore-color-gold-background);
+    --ore-checkbox-active-background-hover: var(--ore-color-gold-background-hover);
+    --ore-checkbox-active-background-pressed: var(--ore-color-gold-background-pressed);
+    --ore-checkbox-active-highlight: var(--ore-color-gold-highlight);
+    --ore-checkbox-active-highlight-hover: var(--ore-color-gold-highlight);
+    --ore-checkbox-active-highlight-pressed: var(--ore-color-gold-highlight);
+  }
+
+  :where(ore-checkbox:focus-visible):before {
+    box-shadow: 0 0 0 var(--ore-checkbox-unit) var(--ore-color-focus-ring), inset 0 0 0 var(--ore-checkbox-unit) var(--ore-checkbox-border), inset 0 0 0 calc(var(--ore-checkbox-unit) * 2) var(--ore-checkbox-highlight);
+  }
+
+  :where(ore-checkbox:focus-visible) {
+    outline: var(--ore-checkbox-unit) solid var(--ore-color-focus-ring);
+    outline-offset: 0;
+    border-radius: 0;
+  }
+
+  :where(ore-checkbox:focus-visible:not([checked])) {
+    --ore-checkbox-highlight: var(--ore-color-neutral-50-highlight-focus);
+  }
+
+  :where(ore-checkbox[disabled], ore-checkbox[form-disabled]) {
+    --ore-checkbox-background: var(--ore-color-disabled);
+    --ore-checkbox-highlight: var(--ore-color-disabled);
+    --ore-checkbox-border: var(--ore-color-disabled-border);
+    --ore-checkbox-indicator: var(--ore-color-disabled-border);
+    cursor: not-allowed;
+  }
+
+  :where(ore-container) {
+    --ore-container-unit: var(--ore-size-unit);
+    --ore-container-dark-background: var(--ore-color-neutral-surface-raised);
+    --ore-container-light-background: var(--ore-color-neutral-surface);
+    --ore-container-highlight: var(--ore-color-neutral-specular);
+    --ore-container-shadow: var(--ore-color-neutral-bevel-shadow);
+    --ore-container-divider: var(--ore-color-neutral-divider);
+    --ore-container-foreground: var(--ore-color-foreground);
+    --ore-container-padding: calc(var(--ore-container-unit) * 8) calc(var(--ore-container-unit) * 11);
+    --ore-container-gap: calc(var(--ore-container-unit) * 8);
+    display: grid;
+    box-sizing: border-box;
+    padding: var(--ore-container-padding);
+    gap: var(--ore-container-gap);
+    color: var(--ore-container-foreground);
+    font-family: var(--ore-font-body);
+  }
+
+  :where(ore-container[variant="dark"]) {
+    border-bottom: var(--ore-container-unit) solid var(--ore-container-divider);
+    background: var(--ore-container-dark-background);
+  }
+
+  :where(ore-container[variant="light"]) {
+    border-top: var(--ore-container-unit) solid var(--ore-container-highlight);
+    border-bottom: var(--ore-container-unit) solid var(--ore-container-shadow);
+    background: var(--ore-container-light-background);
+  }
+
+  :where(ore-divider) {
+    --ore-divider-unit: var(--ore-size-unit);
+    --ore-divider-dark: var(--ore-color-gray-80);
+    --ore-divider-light: var(--ore-color-gray-60);
+    display: block;
+    box-sizing: border-box;
+    height: calc(var(--ore-divider-unit) * 2);
+    background: linear-gradient(to bottom, var(--ore-divider-dark) 0 var(--ore-divider-unit), var(--ore-divider-light) var(--ore-divider-unit) 100%);
+    border: 0;
+    width: 100%;
+  }
+
+  :where(ore-dropdown) {
+    --ore-dropdown-unit: var(--ore-size-unit);
+    --ore-dropdown-menu-background: var(--ore-color-neutral-surface-deep);
+    --ore-dropdown-menu-outline: var(--ore-color-border);
+    --ore-dropdown-scrollbar-width: 0px;
+    --ore-dropdown-item-background: var(--ore-color-neutral-surface-raised);
+    --ore-dropdown-item-background-hover: var(--ore-color-neutral-surface-sunken);
+    --ore-dropdown-item-border: var(--ore-color-neutral-specular);
+    --ore-dropdown-foreground: var(--ore-color-foreground);
+    --ore-dropdown-visible-items: 4;
+    display: inline-flex;
+    min-width: calc(var(--ore-dropdown-unit) * 128);
+    flex-direction: column;
+  }
+
+  :where(ore-dropdown > .ore-dropdown-trigger) {
+    position: relative;
+    padding-right: calc(var(--ore-dropdown-unit) * 20);
+    text-align: left;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  :where(ore-dropdown > .ore-dropdown-trigger):after {
+    position: absolute;
+    top: calc(50% - var(--ore-button-unit)  + var(--ore-button-face-offset));
+    right: calc(var(--ore-dropdown-unit) * 10);
+    width: calc(var(--ore-dropdown-unit) * 8);
+    height: calc(var(--ore-dropdown-unit) * 8);
+    mask: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCA4IDgiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMS41IDMuNXYtMWgtMXYxem0wIDBoMXYxaC0xem02LTF2MWgtMXYuOTY2aC0xdi0xaDFWMi41em0tNCAzdi0xaC0xdjF6bTEgMGgtMXYxaDF6bTAgMHYtMWgxdjF6IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIC0uNSkiLz48L3N2Zz4=") center / contain no-repeat;
+    content: "";
+    background: currentColor;
+    transform: translateY(-50%);
+  }
+
+  :where(ore-dropdown[open] > .ore-dropdown-trigger):after {
+    mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCA4IDgiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNNi41IDUuNXYxaDF2LTF6bTAgMGgtMXYtMWgxem0tNiAxdi0xaDF2LS45NjZoMXYxaC0xVjYuNXptNC0zdjFoMXYtMXptLTEgMGgxdi0xaC0xem0wIDB2MWgtMXYtMXoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgLS41KSIvPjwvc3ZnPgo=");
+  }
+
+  :where(ore-dropdown > .ore-dropdown-menu) {
+    position: fixed;
+    box-sizing: border-box;
+    padding: var(--ore-dropdown-unit);
+    max-height: calc(var(--ore-dropdown-unit) * (var(--ore-dropdown-visible-items) * 18 + 2));
+    overflow-y: auto;
+    color: var(--ore-dropdown-foreground);
+    background: linear-gradient(var(--ore-dropdown-menu-outline), var(--ore-dropdown-menu-outline)) left top / calc(100% - var(--ore-dropdown-scrollbar-width)) var(--ore-dropdown-unit) no-repeat, linear-gradient(var(--ore-dropdown-menu-outline), var(--ore-dropdown-menu-outline)) left bottom / calc(100% - var(--ore-dropdown-scrollbar-width)) var(--ore-dropdown-unit) no-repeat, linear-gradient(var(--ore-dropdown-menu-outline), var(--ore-dropdown-menu-outline)) left top / var(--ore-dropdown-unit) 100% no-repeat, linear-gradient(var(--ore-dropdown-menu-outline), var(--ore-dropdown-menu-outline)) right var(--ore-dropdown-scrollbar-width) top / var(--ore-dropdown-unit) 100% no-repeat, linear-gradient(var(--ore-dropdown-menu-background), var(--ore-dropdown-menu-background)) left top / calc(100% - var(--ore-dropdown-scrollbar-width)) 100% no-repeat;
+    font-family: var(--ore-font-body);
+    border: 0;
+    margin: 0;
+    inset: auto;
+  }
+
+  :where(ore-dropdown > .ore-dropdown-menu:not(:popover-open)) {
+    display: none;
+  }
+
+  :where(ore-dropdown .ore-dropdown-item) {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    min-height: calc(var(--ore-dropdown-unit) * 18);
+    padding: 0 calc(var(--ore-dropdown-unit) * 18) 0 calc(var(--ore-dropdown-unit) * 11);
+    border: var(--ore-dropdown-unit) solid transparent;
+    color: inherit;
+    background: var(--ore-dropdown-item-background);
+    font: inherit;
+    font-size: calc(var(--ore-dropdown-unit) * 7);
+    text-align: left;
+    cursor: pointer;
+    align-items:  center;
+    width: 100%;
+    line-height: 1;
+  }
+
+  :where(ore-dropdown[variant="borderless"] .ore-dropdown-item:focus-visible) {
+    border-color: var(--ore-dropdown-item-border);
+  }
+
+  :where(ore-dropdown[variant="bordered"] .ore-dropdown-item) {
+    border-color: var(--ore-dropdown-item-border);
+  }
+
+  :where(ore-dropdown[variant="bordered"] .ore-dropdown-item:focus-visible) {
+    background: var(--ore-dropdown-item-background-hover);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    :where(ore-dropdown[variant="borderless"] .ore-dropdown-item:hover) {
+      border-color: var(--ore-dropdown-item-border);
+    }
+
+    :where(ore-dropdown[variant="bordered"] .ore-dropdown-item:hover) {
+      background: var(--ore-dropdown-item-background-hover);
+    }
+  }
+
+  :where(ore-dropdown[variant="borderless"] .ore-dropdown-item:active) {
+    border-color: var(--ore-dropdown-item-border);
+  }
+
+  :where(ore-dropdown[variant="bordered"] .ore-dropdown-item:active) {
+    background: var(--ore-dropdown-item-background-hover);
+  }
+
+  :where(ore-dropdown[variant="bordered"] .ore-dropdown-item + .ore-dropdown-item) {
+    border-top: 0;
+  }
+
+  :where(ore-dropdown .ore-dropdown-item:focus-visible) {
+    outline: 0;
+  }
+
+  :where(ore-dropdown .ore-dropdown-item[disabled]) {
+    color: var(--ore-color-disabled-border);
+    cursor: not-allowed;
+  }
+
+  :where(ore-dropdown .ore-dropdown-item[selected]):after {
+    position: absolute;
+    right: calc(var(--ore-dropdown-unit) * 8);
+    width: calc(var(--ore-dropdown-unit) * 8);
+    height: calc(var(--ore-dropdown-unit) * 8);
+    mask: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCA4IDgiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNOCAxLjAwN0g3djFINnYxSDV2MUg0di45ODZIM3YxSDJ2LTFIMXYtMUgwdjFoMXYxaDF2MWgxdi0xaDF2LS45ODZoMXYtMWgxdi0xaDF2LTFoMXoiLz48L3N2Zz4K") center / contain no-repeat;
+    content: "";
+    background: currentColor;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    :where(ore-dropdown > .ore-dropdown-menu:popover-open) {
+      animation: ore-dropdown-show var(--ore-motion-fast) steps(2, jump-none);
+    }
+  }
+
+  @keyframes ore-dropdown-show {
+    from {
+      opacity: 0;
+    }
+  }
+
+  :where(ore-icon-button) {
+    --ore-icon-button-unit: var(--ore-size-unit);
+    --ore-icon-button-background: var(--ore-color-neutral-surface);
+    --ore-icon-button-highlight: var(--ore-color-neutral-specular);
+    --ore-icon-button-shadow-color: var(--ore-color-neutral-bevel-shadow);
+    --ore-icon-button-corner: var(--ore-color-neutral-corner);
+    --ore-icon-button-border: var(--ore-color-border);
+    --ore-icon-button-foreground: var(--ore-color-foreground);
+    display: inline-grid;
+    place-items: var(--ore-icon-button-place-items, center);
+    box-sizing: border-box;
+    width: var(--ore-icon-button-width, calc(var(--ore-icon-button-unit) * 18));
+    height: var(--ore-icon-button-height, calc(var(--ore-icon-button-unit) * 18));
+    padding: var(--ore-icon-button-padding, var(--ore-icon-button-unit));
+    color: var(--ore-icon-button-foreground);
+    background: linear-gradient(var(--ore-icon-button-corner), var(--ore-icon-button-corner)) right top / var(--ore-icon-button-unit) var(--ore-icon-button-unit) no-repeat, linear-gradient(var(--ore-icon-button-corner), var(--ore-icon-button-corner)) left bottom / var(--ore-icon-button-unit) var(--ore-icon-button-unit) no-repeat, linear-gradient(var(--ore-icon-button-highlight), var(--ore-icon-button-highlight)) left top / calc(100% - var(--ore-icon-button-unit)) var(--ore-icon-button-unit) no-repeat, linear-gradient(var(--ore-icon-button-highlight), var(--ore-icon-button-highlight)) left top / var(--ore-icon-button-unit) calc(100% - var(--ore-icon-button-unit)) no-repeat, linear-gradient(var(--ore-icon-button-shadow-color), var(--ore-icon-button-shadow-color)) right bottom / calc(100% - var(--ore-icon-button-unit)) var(--ore-icon-button-unit) no-repeat, linear-gradient(var(--ore-icon-button-shadow-color), var(--ore-icon-button-shadow-color)) right bottom / var(--ore-icon-button-unit) calc(100% - var(--ore-icon-button-unit)) no-repeat, var(--ore-icon-button-background);
+    box-shadow: var(--ore-icon-button-box-shadow, 0 0 0 var(--ore-icon-button-unit) var(--ore-icon-button-border));
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  :where(ore-icon-button > ore-icon) {
+    width: calc(var(--ore-icon-button-unit) * 6);
+    height: calc(var(--ore-icon-button-unit) * 6);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    :where(ore-icon-button:hover:not(:-webkit-any([disabled], [form-disabled]))) {
+      --ore-icon-button-background: var(--ore-color-neutral-background-hover);
+      --ore-icon-button-highlight: var(--ore-color-neutral-highlight-hover);
+      --ore-icon-button-corner: var(--ore-color-neutral-highlight);
+    }
+
+    :where(ore-icon-button:hover:not(:-moz-any([disabled], [form-disabled]))) {
+      --ore-icon-button-background: var(--ore-color-neutral-background-hover);
+      --ore-icon-button-highlight: var(--ore-color-neutral-highlight-hover);
+      --ore-icon-button-corner: var(--ore-color-neutral-highlight);
+    }
+
+    :where(ore-icon-button:hover:not(:is([disabled], [form-disabled]))) {
+      --ore-icon-button-background: var(--ore-color-neutral-background-hover);
+      --ore-icon-button-highlight: var(--ore-color-neutral-highlight-hover);
+      --ore-icon-button-corner: var(--ore-color-neutral-highlight);
+    }
+  }
+
+  :where(ore-icon-button:active:not(:-webkit-any([disabled], [form-disabled])), ore-icon-button[pressed]:not(:-webkit-any([disabled], [form-disabled]))) {
+    --ore-icon-button-background: var(--ore-color-neutral-background-pressed);
+    --ore-icon-button-highlight: var(--ore-color-neutral-shadow);
+    --ore-icon-button-shadow-color: var(--ore-color-neutral-highlight-pressed);
+    --ore-icon-button-corner: var(--ore-color-neutral-background);
+  }
+
+  :where(ore-icon-button:active:not(:-moz-any([disabled], [form-disabled])), ore-icon-button[pressed]:not(:-moz-any([disabled], [form-disabled]))) {
+    --ore-icon-button-background: var(--ore-color-neutral-background-pressed);
+    --ore-icon-button-highlight: var(--ore-color-neutral-shadow);
+    --ore-icon-button-shadow-color: var(--ore-color-neutral-highlight-pressed);
+    --ore-icon-button-corner: var(--ore-color-neutral-background);
+  }
+
+  :where(ore-icon-button:active:not(:is([disabled], [form-disabled])), ore-icon-button[pressed]:not(:is([disabled], [form-disabled]))) {
+    --ore-icon-button-background: var(--ore-color-neutral-background-pressed);
+    --ore-icon-button-highlight: var(--ore-color-neutral-shadow);
+    --ore-icon-button-shadow-color: var(--ore-color-neutral-highlight-pressed);
+    --ore-icon-button-corner: var(--ore-color-neutral-background);
+  }
+
+  :where(ore-icon-button:focus-visible) {
+    outline: var(--ore-icon-button-unit) solid var(--ore-color-focus-ring);
+    outline-offset: var(--ore-icon-button-unit);
+  }
+
+  :where(ore-icon-button[disabled], ore-icon-button[form-disabled]) {
+    --ore-icon-button-background: var(--ore-color-disabled);
+    --ore-icon-button-highlight: var(--ore-color-disabled-border);
+    --ore-icon-button-shadow-color: var(--ore-color-disabled-shadow);
+    --ore-icon-button-corner: var(--ore-color-neutral-50-highlight-focus);
+    --ore-icon-button-border: var(--ore-color-disabled-border);
+    --ore-icon-button-foreground: var(--ore-color-disabled-foreground);
+    cursor: not-allowed;
+  }
+
+  :where(ore-modal) {
+    --ore-modal-unit: var(--ore-size-unit);
+    --ore-modal-border: var(--ore-color-border);
+    --ore-modal-section-background: var(--ore-color-neutral-surface);
+    --ore-modal-highlight: var(--ore-color-neutral-specular);
+    --ore-modal-shadow: var(--ore-color-neutral-bevel-shadow);
+    --ore-modal-foreground: var(--ore-color-foreground);
+  }
+
+  :where(ore-modal > .ore-modal-dialog) {
+    box-sizing: border-box;
+    width: min(calc(var(--ore-modal-unit) * 200), calc(100vw - var(--ore-modal-unit) * 16));
+    max-height: calc(100dvh - var(--ore-modal-unit) * 16);
+    overflow: hidden;
+    color: var(--ore-modal-foreground);
+    font-family: var(--ore-font-body);
+    background: none;
+    border: 0;
+    max-width: none;
+    margin: auto;
+    padding: 0;
+  }
+
+  :where(ore-modal > .ore-modal-dialog)::backdrop {
+    background: var(--ore-color-overlay);
+  }
+
+  :where(ore-modal .ore-modal-content) {
+    display: flex;
+    box-sizing: border-box;
+    max-height: inherit;
+    padding: var(--ore-modal-unit);
+    overflow: hidden;
+    background: var(--ore-modal-border);
+    flex-direction: column;
+  }
+
+  :where(ore-modal .ore-modal-content > ore-container[variant="dark"]) {
+    overflow: auto;
+    flex: auto;
+    min-height: 0;
+  }
+
+  :where(ore-modal .ore-modal-header, ore-modal .ore-modal-content > ore-container[variant="light"]) {
+    flex: none;
+  }
+
+  :where(ore-modal .ore-modal-header) {
+    position: relative;
+    display: grid;
+    grid-template-columns: calc(var(--ore-modal-unit) * 18) 1fr calc(var(--ore-modal-unit) * 18);
+    box-sizing: border-box;
+    min-height: calc(var(--ore-modal-unit) * 19);
+    padding: var(--ore-modal-unit);
+    background: var(--ore-modal-border);
+    align-items:  center;
+  }
+
+  :where(ore-modal .ore-modal-header):before {
+    position: absolute;
+    inset: var(--ore-modal-unit);
+    background: var(--ore-modal-section-background);
+    box-shadow: 0 0 0 var(--ore-modal-unit) var(--ore-modal-highlight);
+    content: "";
+  }
+
+  :where(ore-modal .ore-modal-title) {
+    z-index: 1;
+    font-family: var(--ore-font-body);
+    font-size: calc(var(--ore-modal-unit) * 8);
+    font-weight: 400;
+    line-height: calc(var(--ore-modal-unit) * 10);
+    text-align: center;
+    margin: 0;
+  }
+
+  :where(ore-modal .ore-modal-header-button) {
+    z-index: 1;
+    display: grid;
+    width: calc(var(--ore-modal-unit) * 16);
+    height: calc(var(--ore-modal-unit) * 16);
+    padding: calc(var(--ore-modal-unit) * 4);
+    outline: 0;
+    color: inherit;
+    cursor: pointer;
+    background: none;
+    border: 0;
+    place-items:  center;
+  }
+
+  :where(ore-modal .ore-modal-header-button:first-child) {
+    margin-inline-start: var(--ore-modal-unit);
+  }
+
+  :where(ore-modal .ore-modal-header-button:last-child) {
+    justify-self: end;
+    margin-inline-end: var(--ore-modal-unit);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    :where(ore-modal .ore-modal-header-button:hover) {
+      background: var(--ore-color-neutral-background-hover);
+    }
+  }
+
+  :where(ore-modal .ore-modal-header-button:active) {
+    background: var(--ore-color-neutral-background-pressed);
+  }
+
+  :where(ore-modal .ore-modal-header-button:focus-visible) {
+    outline: var(--ore-modal-unit) solid var(--ore-color-focus-ring);
+  }
+
+  :where(ore-modal .ore-modal-header-button > ore-icon) {
+    width: calc(var(--ore-modal-unit) * 8);
+    height: calc(var(--ore-modal-unit) * 8);
+  }
+
+  :where(ore-modal .ore-modal-description) {
+    font-family: Noto Sans SC, Noto Sans, sans-serif;
+    font-size: calc(var(--ore-modal-unit) * 6);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    :where(ore-modal > .ore-modal-dialog[open]) {
+      animation: ore-modal-show var(--ore-motion-fast) steps(2, jump-none);
+    }
+  }
+
+  @keyframes ore-modal-show {
+    from {
+      opacity: 0;
+    }
+  }
+
+  :where(ore-navbar) {
+    --ore-navbar-unit: var(--ore-size-unit);
+    --ore-navbar-background: var(--ore-color-nav-background);
+    --ore-navbar-bottom-shadow: var(--ore-color-nav-shadow);
+    --ore-navbar-shadow: var(--ore-color-nav-drop-shadow);
+    --ore-navbar-foreground: var(--ore-color-neutral-border);
+    --ore-navbar-action-background: var(--ore-color-nav-background);
+    --ore-navbar-action-highlight: var(--ore-color-nav-action-highlight);
+    --ore-navbar-action-shadow: var(--ore-color-nav-action-shadow);
+    --ore-navbar-text-offset: calc(var(--ore-navbar-unit) / 2);
+    --ore-navbar-icon-offset: 0px;
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    box-sizing: border-box;
+    min-height: calc(var(--ore-navbar-unit) * 20);
+    padding-bottom: calc(var(--ore-navbar-unit) * 2);
+    color: var(--ore-navbar-foreground);
+    background: linear-gradient(to bottom, var(--ore-navbar-background) 0 calc(100% - var(--ore-navbar-unit) * 2), var(--ore-navbar-bottom-shadow) calc(100% - var(--ore-navbar-unit) * 2) 100%);
+    box-shadow: 0 var(--ore-navbar-unit) 0 var(--ore-navbar-shadow);
+    font-family: var(--ore-font-body);
+    align-items:  center;
+  }
+
+  :where(ore-navbar > .ore-navbar-start) {
+    display: flex;
+    grid-column: 1;
+    justify-self: start;
+    align-items:  center;
+    min-width: 0;
+  }
+
+  :where(ore-navbar > .ore-navbar-title) {
+    grid-column: 2;
+    overflow: hidden;
+    font-size: calc(var(--ore-navbar-unit) * 8);
+    line-height: calc(var(--ore-navbar-unit) * 10);
+    text-align: center;
+    text-overflow: ellipsis;
+    transform: translateY(var(--ore-navbar-text-offset));
+    white-space: nowrap;
+    min-width: 0;
+  }
+
+  :where(ore-navbar > .ore-navbar-actions) {
+    display: flex;
+    grid-column: 3;
+    overflow: hidden;
+    place-self: stretch end;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  :where(ore-navbar .ore-navbar-button, ore-navbar .ore-navbar-action) {
+    display: inline-flex;
+    box-sizing: border-box;
+    min-height: calc(var(--ore-navbar-unit) * 18);
+    padding: 0 calc(var(--ore-navbar-unit) * 5);
+    color: inherit;
+    background: var(--ore-navbar-action-background);
+    font: inherit;
+    font-size: calc(var(--ore-navbar-unit) * 8);
+    text-decoration: none;
+    cursor: pointer;
+    border: 0;
+    align-items:  center;
+    min-width: 0;
+    line-height: 1;
+  }
+
+  :where(ore-navbar .ore-navbar-action-label) {
+    transform: translateY(var(--ore-navbar-text-offset));
+  }
+
+  :where(ore-navbar .ore-navbar-button > ore-icon, ore-navbar .ore-navbar-action > ore-icon) {
+    transform: translateY(var(--ore-navbar-icon-offset));
+  }
+
+  :where(ore-navbar .ore-navbar-button) {
+    width: calc(var(--ore-navbar-unit) * 18);
+    justify-content: center;
+    padding: 0;
+  }
+
+  :where(ore-navbar .ore-navbar-action) {
+    gap: calc(var(--ore-navbar-unit) * 4);
+    border-left: var(--ore-navbar-unit) solid var(--ore-navbar-action-shadow);
+    box-shadow: inset var(--ore-navbar-unit) 0 0 var(--ore-navbar-action-highlight);
+    white-space: nowrap;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    :where(ore-navbar .ore-navbar-button:hover, ore-navbar .ore-navbar-action:hover) {
+      filter: brightness(.96);
+    }
+  }
+
+  :where(ore-navbar .ore-navbar-button:active, ore-navbar .ore-navbar-action:active) {
+    filter: brightness(.9);
+  }
+
+  :where(ore-navbar .ore-navbar-button:focus-visible, ore-navbar .ore-navbar-action:focus-visible) {
+    outline: none;
+    box-shadow: inset 0 0 0 var(--ore-navbar-unit) var(--ore-color-focus-ring);
+  }
+
+  :where(ore-navbar .ore-navbar-button > ore-icon) {
+    width: calc(var(--ore-navbar-unit) * 7);
+    height: calc(var(--ore-navbar-unit) * 7);
+  }
+
+  :where(ore-navbar .ore-navbar-action > ore-icon) {
+    width: calc(var(--ore-navbar-unit) * 8);
+    height: calc(var(--ore-navbar-unit) * 8);
+  }
+
+  :where(ore-progress-bar) {
+    --ore-progress-bar-unit: var(--ore-size-unit);
+    --ore-progress-bar-value: 0;
+    --ore-progress-bar-frame: currentColor;
+    --ore-progress-bar-fill: currentColor;
+    --ore-progress-bar-label: currentColor;
+    --ore-progress-bar-label-gap: calc(var(--ore-progress-bar-unit) * 2);
+    display: inline-grid;
+    grid-template-areas: "top" "track" "bottom";
+    box-sizing: border-box;
+    width: min(100%, calc(var(--ore-progress-bar-unit) * 220));
+    color: var(--ore-progress-bar-label);
+    font-family: var(--ore-font-body);
+  }
+
+  :where(ore-progress-bar > .ore-progress-bar-track) {
+    position: relative;
+    grid-area: track;
+    box-sizing: border-box;
+    height: calc(var(--ore-progress-bar-unit) * 8);
+    border: var(--ore-progress-bar-unit) solid var(--ore-progress-bar-frame);
+    width: 100%;
+  }
+
+  :where(ore-progress-bar > .ore-progress-bar-track):after {
+    position: absolute;
+    top: var(--ore-progress-bar-unit);
+    bottom: var(--ore-progress-bar-unit);
+    left: var(--ore-progress-bar-unit);
+    width: calc((100% - var(--ore-progress-bar-unit) * 2) * var(--ore-progress-bar-value));
+    background: var(--ore-progress-bar-fill);
+    content: "";
+  }
+
+  :where(ore-progress-bar > .ore-progress-bar-label) {
+    grid-area: bottom;
+    margin-top: var(--ore-progress-bar-label-gap);
+    font-size: calc(var(--ore-progress-bar-unit) * 6);
+    line-height: calc(var(--ore-progress-bar-unit) * 7);
+    white-space: nowrap;
+  }
+
+  :where(ore-progress-bar[variant="plain"] > .ore-progress-bar-label) {
+    display: none;
+  }
+
+  :where(ore-progress-bar[variant="labeled"][label-position="top"] > .ore-progress-bar-label) {
+    grid-area: top;
+    margin-top: 0;
+    margin-bottom: var(--ore-progress-bar-label-gap);
+  }
+
+  :where(ore-progress-bar[label-align="start"] > .ore-progress-bar-label) {
+    justify-self: start;
+  }
+
+  :where(ore-progress-bar[label-align="center"] > .ore-progress-bar-label) {
+    justify-self: center;
+  }
+
+  :where(ore-progress-bar[label-align="end"] > .ore-progress-bar-label) {
+    justify-self: end;
+  }
+
+  :where(ore-progress-ring) {
+    --ore-progress-ring-frame: 0;
+    display: inline-block;
+    overflow: hidden;
+    box-sizing: border-box;
+    color: inherit;
+    vertical-align: -.125em;
+    width: 1em;
+    height: 1em;
+    line-height: 1;
+  }
+
+  :where(ore-progress-ring > svg) {
+    display: block;
+    transform: translateX(calc(var(--ore-progress-ring-frame) * -6.47482%));
+    width: 3475%;
+    max-width: none;
+    height: 100%;
+  }
+
+  :where(ore-radio) {
+    --ore-radio-unit: var(--ore-size-unit);
+    --ore-radio-background: var(--ore-color-neutral-50-background);
+    --ore-radio-highlight: var(--ore-color-neutral-50-highlight);
+    --ore-radio-border: var(--ore-color-border);
+    --ore-radio-indicator-light: var(--ore-color-white);
+    --ore-radio-indicator-dim: var(--ore-color-gray-20);
+    --ore-radio-indicator-dark: var(--ore-color-gray-30);
+    --ore-radio-active-background: var(--ore-color-primary-background);
+    --ore-radio-active-background-hover: var(--ore-color-primary-background-hover);
+    --ore-radio-active-background-pressed: var(--ore-color-primary-background-pressed);
+    --ore-radio-active-highlight: var(--ore-color-primary-highlight);
+    --ore-radio-active-highlight-hover: var(--ore-color-primary-highlight-hover);
+    --ore-radio-active-highlight-pressed: var(--ore-color-primary-highlight-pressed);
+    position: relative;
+    display: inline-flex;
+    align-items:  center;
+    gap: calc(var(--ore-radio-unit) * 4);
+    min-height: calc(var(--ore-radio-unit) * 16);
+    padding-left: calc(var(--ore-radio-unit) * 16);
+    color: var(--ore-color-border);
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  :where(ore-radio):before {
+    position: absolute;
+    top: 50%;
+    left: calc(var(--ore-radio-unit) * 3.5);
+    box-sizing: border-box;
+    width: calc(var(--ore-radio-unit) * 9);
+    height: calc(var(--ore-radio-unit) * 9);
+    background: var(--ore-radio-background);
+    box-shadow: inset 0 0 0 var(--ore-radio-unit) var(--ore-radio-border), inset 0 0 0 calc(var(--ore-radio-unit) * 2) var(--ore-radio-highlight);
+    content: "";
+    transform: translateY(-50%)rotate(-45deg);
+  }
+
+  :where(ore-radio[checked]):before {
+    background: linear-gradient(to right, var(--ore-radio-indicator-dim) 50%, var(--ore-radio-indicator-light) 0) center calc(50% - var(--ore-radio-unit)) / calc(var(--ore-radio-unit) * 4) calc(var(--ore-radio-unit) * 2) no-repeat, linear-gradient(to right, var(--ore-radio-indicator-dark) 50%, var(--ore-radio-indicator-dim) 0) center calc(50% + var(--ore-radio-unit)) / calc(var(--ore-radio-unit) * 4) calc(var(--ore-radio-unit) * 2) no-repeat, var(--ore-radio-background);
+  }
+
+  :where(ore-radio[checked]) {
+    --ore-radio-background: var(--ore-radio-active-background);
+    --ore-radio-highlight: var(--ore-radio-active-highlight);
+  }
+
+  :where(ore-radio[color="secondary"], ore-radio[color="dungeons"], ore-radio[color="legends"], ore-radio[color="gold"]) {
+    --ore-radio-indicator-light: var(--ore-color-gray-80);
+    --ore-radio-indicator-dim: var(--ore-color-gray-90);
+    --ore-radio-indicator-dark: var(--ore-color-gray-100);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    :where(ore-radio:hover:not(:-webkit-any([disabled], [form-disabled]))) {
+      --ore-radio-background: var(--ore-color-neutral-50-background-hover);
+      --ore-radio-highlight: var(--ore-color-neutral-50-highlight-hover);
+    }
+
+    :where(ore-radio:hover:not(:-moz-any([disabled], [form-disabled]))) {
+      --ore-radio-background: var(--ore-color-neutral-50-background-hover);
+      --ore-radio-highlight: var(--ore-color-neutral-50-highlight-hover);
+    }
+
+    :where(ore-radio:hover:not(:is([disabled], [form-disabled]))) {
+      --ore-radio-background: var(--ore-color-neutral-50-background-hover);
+      --ore-radio-highlight: var(--ore-color-neutral-50-highlight-hover);
+    }
+
+    :where(ore-radio[checked]:hover:not(:-webkit-any([disabled], [form-disabled]))) {
+      --ore-radio-background: var(--ore-radio-active-background-hover);
+      --ore-radio-highlight: var(--ore-radio-active-highlight-hover);
+    }
+
+    :where(ore-radio[checked]:hover:not(:-moz-any([disabled], [form-disabled]))) {
+      --ore-radio-background: var(--ore-radio-active-background-hover);
+      --ore-radio-highlight: var(--ore-radio-active-highlight-hover);
+    }
+
+    :where(ore-radio[checked]:hover:not(:is([disabled], [form-disabled]))) {
+      --ore-radio-background: var(--ore-radio-active-background-hover);
+      --ore-radio-highlight: var(--ore-radio-active-highlight-hover);
+    }
+  }
+
+  :where(ore-radio:active:not(:-webkit-any([disabled], [form-disabled])), ore-radio[pressed]:not(:-webkit-any([disabled], [form-disabled]))) {
+    --ore-radio-background: var(--ore-color-neutral-50-background-pressed);
+    --ore-radio-highlight: var(--ore-color-neutral-50-highlight-pressed);
+  }
+
+  :where(ore-radio:active:not(:-moz-any([disabled], [form-disabled])), ore-radio[pressed]:not(:-moz-any([disabled], [form-disabled]))) {
+    --ore-radio-background: var(--ore-color-neutral-50-background-pressed);
+    --ore-radio-highlight: var(--ore-color-neutral-50-highlight-pressed);
+  }
+
+  :where(ore-radio:active:not(:is([disabled], [form-disabled])), ore-radio[pressed]:not(:is([disabled], [form-disabled]))) {
+    --ore-radio-background: var(--ore-color-neutral-50-background-pressed);
+    --ore-radio-highlight: var(--ore-color-neutral-50-highlight-pressed);
+  }
+
+  :where(ore-radio[checked]:active:not(:-webkit-any([disabled], [form-disabled])), ore-radio[checked][pressed]:not(:-webkit-any([disabled], [form-disabled]))) {
+    --ore-radio-background: var(--ore-radio-active-background-pressed);
+    --ore-radio-highlight: var(--ore-radio-active-highlight-pressed);
+  }
+
+  :where(ore-radio[checked]:active:not(:-moz-any([disabled], [form-disabled])), ore-radio[checked][pressed]:not(:-moz-any([disabled], [form-disabled]))) {
+    --ore-radio-background: var(--ore-radio-active-background-pressed);
+    --ore-radio-highlight: var(--ore-radio-active-highlight-pressed);
+  }
+
+  :where(ore-radio[checked]:active:not(:is([disabled], [form-disabled])), ore-radio[checked][pressed]:not(:is([disabled], [form-disabled]))) {
+    --ore-radio-background: var(--ore-radio-active-background-pressed);
+    --ore-radio-highlight: var(--ore-radio-active-highlight-pressed);
+  }
+
+  :where(ore-radio[color="secondary"]) {
+    --ore-radio-active-background: var(--ore-color-secondary-background);
+    --ore-radio-active-background-hover: var(--ore-color-secondary-background-hover);
+    --ore-radio-active-background-pressed: var(--ore-color-secondary-background-pressed);
+    --ore-radio-active-highlight: var(--ore-color-secondary-highlight);
+    --ore-radio-active-highlight-hover: var(--ore-color-secondary-highlight-hover);
+    --ore-radio-active-highlight-pressed: var(--ore-color-secondary-highlight-pressed);
+  }
+
+  :where(ore-radio[color="destructive"]) {
+    --ore-radio-active-background: var(--ore-color-destructive-background);
+    --ore-radio-active-background-hover: var(--ore-color-destructive-background-hover);
+    --ore-radio-active-background-pressed: var(--ore-color-destructive-background-pressed);
+    --ore-radio-active-highlight: var(--ore-color-destructive-highlight);
+    --ore-radio-active-highlight-hover: var(--ore-color-destructive-highlight);
+    --ore-radio-active-highlight-pressed: var(--ore-color-destructive-highlight);
+  }
+
+  :where(ore-radio[color="dungeons"]) {
+    --ore-radio-active-background: var(--ore-color-dungeons-background);
+    --ore-radio-active-background-hover: var(--ore-color-dungeons-background-hover);
+    --ore-radio-active-background-pressed: var(--ore-color-dungeons-background-pressed);
+    --ore-radio-active-highlight: var(--ore-color-dungeons-highlight);
+    --ore-radio-active-highlight-hover: var(--ore-color-dungeons-highlight);
+    --ore-radio-active-highlight-pressed: var(--ore-color-dungeons-highlight);
+  }
+
+  :where(ore-radio[color="legends"]) {
+    --ore-radio-active-background: var(--ore-color-legends-background);
+    --ore-radio-active-background-hover: var(--ore-color-legends-background-hover);
+    --ore-radio-active-background-pressed: var(--ore-color-legends-background-pressed);
+    --ore-radio-active-highlight: var(--ore-color-legends-highlight);
+    --ore-radio-active-highlight-hover: var(--ore-color-legends-highlight);
+    --ore-radio-active-highlight-pressed: var(--ore-color-legends-highlight);
+  }
+
+  :where(ore-radio[color="realms"]) {
+    --ore-radio-active-background: var(--ore-color-realms-background);
+    --ore-radio-active-background-hover: var(--ore-color-realms-background-hover);
+    --ore-radio-active-background-pressed: var(--ore-color-realms-background-pressed);
+    --ore-radio-active-highlight: var(--ore-color-realms-highlight);
+    --ore-radio-active-highlight-hover: var(--ore-color-realms-highlight);
+    --ore-radio-active-highlight-pressed: var(--ore-color-realms-highlight);
+  }
+
+  :where(ore-radio[color="gold"]) {
+    --ore-radio-active-background: var(--ore-color-gold-background);
+    --ore-radio-active-background-hover: var(--ore-color-gold-background-hover);
+    --ore-radio-active-background-pressed: var(--ore-color-gold-background-pressed);
+    --ore-radio-active-highlight: var(--ore-color-gold-highlight);
+    --ore-radio-active-highlight-hover: var(--ore-color-gold-highlight);
+    --ore-radio-active-highlight-pressed: var(--ore-color-gold-highlight);
+  }
+
+  :where(ore-radio:focus-visible):before {
+    box-shadow: 0 0 0 var(--ore-radio-unit) var(--ore-color-focus-ring), inset 0 0 0 var(--ore-radio-unit) var(--ore-radio-border), inset 0 0 0 calc(var(--ore-radio-unit) * 2) var(--ore-radio-highlight);
+  }
+
+  :where(ore-radio:focus-visible) {
+    outline: var(--ore-radio-unit) solid var(--ore-color-focus-ring);
+    outline-offset: 0;
+    border-radius: 0;
+  }
+
+  :where(ore-radio:focus-visible:not([checked])) {
+    --ore-radio-highlight: var(--ore-color-neutral-50-highlight-focus);
+  }
+
+  :where(ore-radio[disabled], ore-radio[form-disabled]) {
+    --ore-radio-background: var(--ore-color-disabled);
+    --ore-radio-highlight: var(--ore-color-disabled);
+    --ore-radio-border: var(--ore-color-disabled-border);
+    cursor: not-allowed;
+  }
+
+  :where(ore-radio-group) {
+    display: grid;
+    gap: calc(var(--ore-size-unit) * 4);
+  }
+
+  :where(ore-scrollbar, .ore-scrollbar, ore-modal .ore-modal-content > ore-container[variant="dark"], ore-table, ore-dropdown > .ore-dropdown-menu) {
+    --ore-scrollbar-unit: var(--ore-size-unit);
+    --ore-scrollbar-size: calc(var(--ore-scrollbar-unit) * 6);
+    --ore-scrollbar-horizontal-size: calc(var(--ore-scrollbar-unit) * 8);
+    --ore-scrollbar-track-size: calc(var(--ore-scrollbar-unit) * 2);
+    --ore-scrollbar-thumb-min-size: calc(var(--ore-scrollbar-unit) * 12);
+    --ore-scrollbar-track: var(--ore-color-neutral-highlight-pressed);
+    --ore-scrollbar-thumb-border: var(--ore-color-border);
+    --ore-scrollbar-thumb-highlight: var(--ore-color-secondary-highlight);
+    --ore-scrollbar-thumb-background: var(--ore-color-secondary-background);
+    --ore-scrollbar-thumb-shadow: var(--ore-color-secondary-shadow);
+    --ore-scrollbar-z-index: 1;
+  }
+
+  :where(ore-scrollbar, .ore-scrollbar) {
+    display: block;
+    overflow: auto;
+  }
+
+  :where(ore-scrollbar) {
+    position: relative;
+    scrollbar-width: none;
+    scrollbar-color: transparent transparent;
+  }
+
+  :where(ore-scrollbar)::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  :where(ore-scrollbar) > .ore-scrollbar-track {
+    position: sticky;
+    z-index: var(--ore-scrollbar-z-index);
+    display: block;
+    pointer-events: none;
+    background: linear-gradient(var(--ore-scrollbar-track), var(--ore-scrollbar-track)) center / var(--ore-scrollbar-track-size) 100% no-repeat;
+  }
+
+  :where(ore-scrollbar) > .ore-scrollbar-track[hidden] {
+    display: none;
+  }
+
+  :where(ore-scrollbar) > .ore-scrollbar-track-vertical {
+    inset: 0 auto auto calc(100% - var(--ore-scrollbar-size));
+    width: var(--ore-scrollbar-size);
+    height: var(--ore-scrollbar-vertical-track-size);
+    margin-bottom: calc(-1 * var(--ore-scrollbar-vertical-track-size));
+  }
+
+  :where(ore-scrollbar) > .ore-scrollbar-track-horizontal {
+    width: var(--ore-scrollbar-horizontal-track-size);
+    height: var(--ore-scrollbar-horizontal-size);
+    margin-top: calc(-1 * var(--ore-scrollbar-horizontal-size));
+    background-size: 100% var(--ore-scrollbar-track-size);
+    inset: auto auto 0 0;
+  }
+
+  :where(ore-scrollbar) > .ore-scrollbar-track > .ore-scrollbar-thumb {
+    position: absolute;
+    display: block;
+    pointer-events: auto;
+    background: linear-gradient(var(--ore-scrollbar-thumb-background), var(--ore-scrollbar-thumb-background)) center calc(var(--ore-scrollbar-unit) * 2) / calc(100% - var(--ore-scrollbar-unit) * 4) calc(100% - var(--ore-scrollbar-unit) * 6) no-repeat, linear-gradient(var(--ore-scrollbar-thumb-shadow), var(--ore-scrollbar-thumb-shadow)) center bottom var(--ore-scrollbar-unit) / calc(100% - var(--ore-scrollbar-unit) * 2) calc(var(--ore-scrollbar-unit) * 2) no-repeat, linear-gradient(var(--ore-scrollbar-thumb-highlight), var(--ore-scrollbar-thumb-highlight)) center var(--ore-scrollbar-unit) / calc(100% - var(--ore-scrollbar-unit) * 2) calc(100% - var(--ore-scrollbar-unit) * 4) no-repeat, var(--ore-scrollbar-thumb-border);
+    touch-action: none;
+    border-radius: 0;
+  }
+
+  :where(ore-scrollbar) > .ore-scrollbar-track > .ore-scrollbar-thumb-vertical {
+    width: 100%;
+    inset: 0 0 auto;
+  }
+
+  :where(ore-scrollbar) > .ore-scrollbar-track > .ore-scrollbar-thumb-horizontal {
+    height: 100%;
+    inset: 0 auto auto 0;
+  }
+
+  @supports (-moz-appearance: none) {
+    :where(.ore-scrollbar, ore-modal .ore-modal-content > ore-container[variant="dark"], ore-table, ore-dropdown > .ore-dropdown-menu) {
+      scrollbar-color: var(--ore-scrollbar-thumb-background) var(--ore-scrollbar-track);
+      scrollbar-width: thin;
+    }
+  }
+
+  :where(ore-scrollbar, .ore-scrollbar, ore-modal .ore-modal-content > ore-container[variant="dark"], ore-table, ore-dropdown > .ore-dropdown-menu)::-webkit-scrollbar {
+    width: var(--ore-scrollbar-size);
+    height: var(--ore-scrollbar-horizontal-size);
+  }
+
+  :where(ore-scrollbar, .ore-scrollbar, ore-modal .ore-modal-content > ore-container[variant="dark"], ore-table, ore-dropdown > .ore-dropdown-menu)::-webkit-scrollbar-button {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  :where(ore-scrollbar, .ore-scrollbar, ore-modal .ore-modal-content > ore-container[variant="dark"], ore-table, ore-dropdown > .ore-dropdown-menu)::-webkit-scrollbar-track:vertical {
+    background: linear-gradient(var(--ore-scrollbar-track), var(--ore-scrollbar-track)) center / var(--ore-scrollbar-track-size) 100% no-repeat;
+  }
+
+  :where(ore-scrollbar, .ore-scrollbar, ore-modal .ore-modal-content > ore-container[variant="dark"], ore-table, ore-dropdown > .ore-dropdown-menu)::-webkit-scrollbar-track:horizontal {
+    background: linear-gradient(var(--ore-scrollbar-track), var(--ore-scrollbar-track)) center / 100% var(--ore-scrollbar-track-size) no-repeat;
+  }
+
+  :where(ore-scrollbar, .ore-scrollbar, ore-modal .ore-modal-content > ore-container[variant="dark"], ore-table, ore-dropdown > .ore-dropdown-menu)::-webkit-scrollbar-thumb:vertical {
+    min-height: var(--ore-scrollbar-thumb-min-size);
+    background: linear-gradient(var(--ore-scrollbar-thumb-background), var(--ore-scrollbar-thumb-background)) center calc(var(--ore-scrollbar-unit) * 2) / calc(100% - var(--ore-scrollbar-unit) * 4) calc(100% - var(--ore-scrollbar-unit) * 6) no-repeat, linear-gradient(var(--ore-scrollbar-thumb-shadow), var(--ore-scrollbar-thumb-shadow)) center bottom var(--ore-scrollbar-unit) / calc(100% - var(--ore-scrollbar-unit) * 2) calc(var(--ore-scrollbar-unit) * 2) no-repeat, linear-gradient(var(--ore-scrollbar-thumb-highlight), var(--ore-scrollbar-thumb-highlight)) center var(--ore-scrollbar-unit) / calc(100% - var(--ore-scrollbar-unit) * 2) calc(100% - var(--ore-scrollbar-unit) * 4) no-repeat, var(--ore-scrollbar-thumb-border);
+    border-radius: 0;
+  }
+
+  :where(ore-scrollbar, .ore-scrollbar, ore-modal .ore-modal-content > ore-container[variant="dark"], ore-table, ore-dropdown > .ore-dropdown-menu)::-webkit-scrollbar-thumb:horizontal {
+    min-width: var(--ore-scrollbar-thumb-min-size);
+    background: linear-gradient(var(--ore-scrollbar-thumb-background), var(--ore-scrollbar-thumb-background)) center calc(var(--ore-scrollbar-unit) * 2) / calc(100% - var(--ore-scrollbar-unit) * 4) calc(var(--ore-scrollbar-unit) * 2) no-repeat, linear-gradient(var(--ore-scrollbar-thumb-shadow), var(--ore-scrollbar-thumb-shadow)) center bottom var(--ore-scrollbar-unit) / calc(100% - var(--ore-scrollbar-unit) * 2) calc(var(--ore-scrollbar-unit) * 2) no-repeat, linear-gradient(var(--ore-scrollbar-thumb-highlight), var(--ore-scrollbar-thumb-highlight)) center var(--ore-scrollbar-unit) / calc(100% - var(--ore-scrollbar-unit) * 2) calc(var(--ore-scrollbar-unit) * 4) no-repeat, var(--ore-scrollbar-thumb-border);
+    border-radius: 0;
+  }
+
+  :where(ore-scrollbar, .ore-scrollbar, ore-modal .ore-modal-content > ore-container[variant="dark"], ore-table, ore-dropdown > .ore-dropdown-menu)::-webkit-scrollbar-corner {
+    background: none;
+  }
+
+  :where(ore-scrollbar)::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  :where(ore-slider) {
+    --ore-slider-unit: var(--ore-size-unit);
+    --ore-slider-progress-start: 0;
+    --ore-slider-progress-end: 0;
+    --ore-slider-segment-size: 10%;
+    --ore-slider-value-start: calc(var(--ore-slider-unit) * 7.25 + (100% - var(--ore-slider-unit) * 14.5) * var(--ore-slider-progress-start));
+    --ore-slider-value-end: calc(var(--ore-slider-unit) * 7.25 + (100% - var(--ore-slider-unit) * 14.5) * var(--ore-slider-progress-end));
+    --ore-slider-track-border: var(--ore-color-border);
+    --ore-slider-active-range-background: var(--ore-color-primary-background);
+    --ore-slider-active-range-highlight: var(--ore-color-primary-highlight);
+    --ore-slider-range-background: var(--ore-slider-active-range-background);
+    --ore-slider-range-highlight: var(--ore-slider-active-range-highlight);
+    --ore-slider-track-background: var(--ore-color-neutral-50-background);
+    --ore-slider-track-highlight: var(--ore-color-neutral-50-highlight-focus);
+    --ore-slider-thumb-background: var(--ore-color-secondary-background);
+    --ore-slider-thumb-highlight: var(--ore-color-secondary-highlight);
+    --ore-slider-thumb-shadow: var(--ore-color-secondary-shadow);
+    --ore-slider-thumb-border: var(--ore-color-border);
+    --ore-slider-thumb-focus-ring: transparent;
+    --ore-slider-thumb-image: linear-gradient(var(--ore-slider-thumb-background), var(--ore-slider-thumb-background)) center calc(var(--ore-slider-unit) * 2) / calc(var(--ore-slider-unit) * 10.5) calc(var(--ore-slider-unit) * 8.5) no-repeat, linear-gradient(var(--ore-slider-thumb-shadow), var(--ore-slider-thumb-shadow)) center calc(var(--ore-slider-unit) * 11.5) / calc(var(--ore-slider-unit) * 12.5) calc(var(--ore-slider-unit) * 2) no-repeat, linear-gradient(var(--ore-slider-thumb-highlight), var(--ore-slider-thumb-highlight)) center var(--ore-slider-unit) / calc(var(--ore-slider-unit) * 12.5) calc(var(--ore-slider-unit) * 10.5) no-repeat, var(--ore-slider-thumb-border);
+    --ore-slider-segments: none;
+    position: relative;
+    display: inline-block;
+    width: min(100%, calc(var(--ore-slider-unit) * 254.5));
+    height: calc(var(--ore-slider-unit) * 14.5);
+  }
+
+  :where(ore-slider[variant="segmented"]) {
+    --ore-slider-segments: repeating-linear-gradient(to right, var(--ore-slider-track-border) 0 calc(var(--ore-slider-unit) / 2), transparent calc(var(--ore-slider-unit) / 2) calc(var(--ore-slider-segment-size)  - var(--ore-slider-unit) / 2), var(--ore-slider-track-border) calc(var(--ore-slider-segment-size)  - var(--ore-slider-unit) / 2) var(--ore-slider-segment-size));
+  }
+
+  :where(ore-slider[color="secondary"]) {
+    --ore-slider-active-range-background: var(--ore-color-secondary-background);
+    --ore-slider-active-range-highlight: var(--ore-color-secondary-highlight);
+  }
+
+  :where(ore-slider[color="destructive"]) {
+    --ore-slider-active-range-background: var(--ore-color-destructive-background);
+    --ore-slider-active-range-highlight: var(--ore-color-destructive-highlight);
+  }
+
+  :where(ore-slider[color="dungeons"]) {
+    --ore-slider-active-range-background: var(--ore-color-dungeons-background);
+    --ore-slider-active-range-highlight: var(--ore-color-dungeons-highlight);
+  }
+
+  :where(ore-slider[color="legends"]) {
+    --ore-slider-active-range-background: var(--ore-color-legends-background);
+    --ore-slider-active-range-highlight: var(--ore-color-legends-highlight);
+  }
+
+  :where(ore-slider[color="realms"]) {
+    --ore-slider-active-range-background: var(--ore-color-realms-background);
+    --ore-slider-active-range-highlight: var(--ore-color-realms-highlight);
+  }
+
+  :where(ore-slider[color="gold"]) {
+    --ore-slider-active-range-background: var(--ore-color-gold-background);
+    --ore-slider-active-range-highlight: var(--ore-color-gold-highlight);
+  }
+
+  :where(ore-slider[orientation="vertical"]) {
+    --ore-slider-value-start: calc(var(--ore-slider-unit) * 7.25 + (100% - var(--ore-slider-unit) * 14.5) * var(--ore-slider-progress-start));
+    --ore-slider-value-end: calc(var(--ore-slider-unit) * 7.25 + (100% - var(--ore-slider-unit) * 14.5) * var(--ore-slider-progress-end));
+    width: calc(var(--ore-slider-unit) * 14.5);
+    height: calc(var(--ore-slider-unit) * 127.25);
+  }
+
+  :where(ore-slider:not([range])) {
+    --ore-slider-value-start: 0;
+  }
+
+  :where(ore-slider[orientation="vertical"][variant="segmented"]) {
+    --ore-slider-segments: repeating-linear-gradient(to top, var(--ore-slider-track-border) 0 calc(var(--ore-slider-unit) / 2), transparent calc(var(--ore-slider-unit) / 2) calc(var(--ore-slider-segment-size)  - var(--ore-slider-unit) / 2), var(--ore-slider-track-border) calc(var(--ore-slider-segment-size)  - var(--ore-slider-unit) / 2) var(--ore-slider-segment-size));
+  }
+
+  :where(ore-slider):before {
+    position: absolute;
+    height: calc(var(--ore-slider-unit) * 5.5);
+    background: var(--ore-slider-segments) center / calc(100% - var(--ore-slider-unit) * 14.5) calc(var(--ore-slider-unit) * 3.5) no-repeat, linear-gradient(to right, var(--ore-slider-track-background) 0 var(--ore-slider-value-start), var(--ore-slider-range-background) var(--ore-slider-value-start) var(--ore-slider-value-end), var(--ore-slider-track-background) var(--ore-slider-value-end) 100%) center / calc(100% - var(--ore-slider-unit) * 4) calc(var(--ore-slider-unit) * 1.5) no-repeat, linear-gradient(to right, var(--ore-slider-track-highlight) 0 var(--ore-slider-value-start), var(--ore-slider-range-highlight) var(--ore-slider-value-start) var(--ore-slider-value-end), var(--ore-slider-track-highlight) var(--ore-slider-value-end) 100%) center / calc(100% - var(--ore-slider-unit) * 2) calc(var(--ore-slider-unit) * 3.5) no-repeat, var(--ore-slider-track-border);
+    content: "";
+    pointer-events: none;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+  }
+
+  :where(ore-slider[variant="segmented"]):after {
+    position: absolute;
+    top: 50%;
+    right: calc(var(--ore-slider-unit) * 7.25);
+    left: calc(var(--ore-slider-unit) * 7.25);
+    height: calc(var(--ore-slider-unit) * 3.5);
+    background: linear-gradient(var(--ore-slider-track-border), var(--ore-slider-track-border)) left / var(--ore-slider-unit) 100% no-repeat, linear-gradient(var(--ore-slider-track-border), var(--ore-slider-track-border)) right / var(--ore-slider-unit) 100% no-repeat;
+    content: "";
+    pointer-events: none;
+    transform: translateY(-50%);
+  }
+
+  :where(ore-slider[orientation="vertical"]):before {
+    width: calc(var(--ore-slider-unit) * 5.5);
+    background: var(--ore-slider-segments) center / 100% calc(100% - var(--ore-slider-unit) * 14.5) no-repeat, linear-gradient(to top, var(--ore-slider-track-background) 0 var(--ore-slider-value-start), var(--ore-slider-range-background) var(--ore-slider-value-start) var(--ore-slider-value-end), var(--ore-slider-track-background) var(--ore-slider-value-end) 100%) center / calc(var(--ore-slider-unit) * 1.5) calc(100% - var(--ore-slider-unit) * 4) no-repeat, linear-gradient(to top, var(--ore-slider-track-highlight) 0 var(--ore-slider-value-start), var(--ore-slider-range-highlight) var(--ore-slider-value-start) var(--ore-slider-value-end), var(--ore-slider-track-highlight) var(--ore-slider-value-end) 100%) center / calc(var(--ore-slider-unit) * 3.5) calc(100% - var(--ore-slider-unit) * 2) no-repeat, var(--ore-slider-track-border);
+    height: auto;
+    inset: 0 auto 0 50%;
+    transform: translateX(-50%);
+  }
+
+  :where(ore-slider[orientation="vertical"][variant="segmented"]):after {
+    top: calc(var(--ore-slider-unit) * 7.25);
+    right: auto;
+    bottom: calc(var(--ore-slider-unit) * 7.25);
+    width: calc(var(--ore-slider-unit) * 3.5);
+    background: linear-gradient(var(--ore-slider-track-border), var(--ore-slider-track-border)) bottom / 100% var(--ore-slider-unit) no-repeat, linear-gradient(var(--ore-slider-track-border), var(--ore-slider-track-border)) top / 100% var(--ore-slider-unit) no-repeat;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  :where(ore-slider > input[type="range"]) {
+    position: relative;
+    appearance: none;
+    cursor: pointer;
+    background: none;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  :where(ore-slider[range] > input[type="range"]) {
+    position: absolute;
+    pointer-events: none;
+    inset: 0;
+  }
+
+  :where(ore-slider[range] > input[type="range"])::-webkit-slider-thumb {
+    pointer-events: auto;
+  }
+
+  :where(ore-slider[range] > input[type="range"])::-moz-range-thumb {
+    pointer-events: auto;
+  }
+
+  :where(ore-slider[range] > .ore-slider-input-end) {
+    z-index: 1;
+  }
+
+  :where(ore-slider[range]:has( > .ore-slider-input-start:focus) > .ore-slider-input-start) {
+    z-index: 2;
+  }
+
+  :where(ore-slider[orientation="vertical"] > input[type="range"]) {
+    writing-mode: vertical-lr;
+    direction: rtl;
+  }
+
+  :where(ore-slider > input[type="range"])::-webkit-slider-runnable-track {
+    height: calc(var(--ore-slider-unit) * 5.5);
+    background: none;
+  }
+
+  :where(ore-slider[orientation="vertical"] > input[type="range"])::-webkit-slider-runnable-track {
+    width: calc(var(--ore-slider-unit) * 5.5);
+    height: 100%;
+  }
+
+  :where(ore-slider > input[type="range"])::-moz-range-track {
+    height: calc(var(--ore-slider-unit) * 5.5);
+    background: none;
+  }
+
+  :where(ore-slider[orientation="vertical"] > input[type="range"])::-moz-range-track {
+    width: calc(var(--ore-slider-unit) * 5.5);
+    height: 100%;
+  }
+
+  :where(ore-slider > input[type="range"])::-webkit-slider-thumb {
+    width: calc(var(--ore-slider-unit) * 14.5);
+    height: calc(var(--ore-slider-unit) * 14.5);
+    margin-top: calc(var(--ore-slider-unit) * -4.5);
+    appearance: none;
+    background: var(--ore-slider-thumb-image);
+    box-shadow: 0 0 0 var(--ore-slider-unit) var(--ore-slider-thumb-focus-ring);
+    border: 0;
+    border-radius: 0;
+  }
+
+  :where(ore-slider[orientation="vertical"] > input[type="range"])::-webkit-slider-thumb {
+    margin-top: 0;
+    margin-left: calc(var(--ore-slider-unit) * -4.5);
+  }
+
+  :where(ore-slider > input[type="range"])::-moz-range-thumb {
+    width: calc(var(--ore-slider-unit) * 14.5);
+    height: calc(var(--ore-slider-unit) * 14.5);
+    appearance: none;
+    background: var(--ore-slider-thumb-image);
+    box-shadow: 0 0 0 var(--ore-slider-unit) var(--ore-slider-thumb-focus-ring);
+    border: 0;
+    border-radius: 0;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    :where(ore-slider:hover:not(:-webkit-any([disabled], [form-disabled]))) {
+      --ore-slider-thumb-background: var(--ore-color-secondary-background-hover);
+      --ore-slider-thumb-highlight: var(--ore-color-secondary-highlight-hover);
+    }
+
+    :where(ore-slider:hover:not(:-moz-any([disabled], [form-disabled]))) {
+      --ore-slider-thumb-background: var(--ore-color-secondary-background-hover);
+      --ore-slider-thumb-highlight: var(--ore-color-secondary-highlight-hover);
+    }
+
+    :where(ore-slider:hover:not(:is([disabled], [form-disabled]))) {
+      --ore-slider-thumb-background: var(--ore-color-secondary-background-hover);
+      --ore-slider-thumb-highlight: var(--ore-color-secondary-highlight-hover);
+    }
+  }
+
+  :where(ore-slider:active:not(:-webkit-any([disabled], [form-disabled]))) {
+    --ore-slider-thumb-background: var(--ore-color-secondary-background-pressed);
+    --ore-slider-thumb-highlight: var(--ore-color-secondary-highlight-pressed);
+  }
+
+  :where(ore-slider:active:not(:-moz-any([disabled], [form-disabled]))) {
+    --ore-slider-thumb-background: var(--ore-color-secondary-background-pressed);
+    --ore-slider-thumb-highlight: var(--ore-color-secondary-highlight-pressed);
+  }
+
+  :where(ore-slider:active:not(:is([disabled], [form-disabled]))) {
+    --ore-slider-thumb-background: var(--ore-color-secondary-background-pressed);
+    --ore-slider-thumb-highlight: var(--ore-color-secondary-highlight-pressed);
+  }
+
+  :where(ore-slider:has( > input[type="range"]:focus-visible)) {
+    --ore-slider-thumb-highlight: color-mix(in srgb, var(--ore-color-secondary-background), var(--ore-color-white) 60%);
+    --ore-slider-thumb-focus-ring: var(--ore-color-focus-ring);
+  }
+
+  :where(ore-slider > input[type="range"]:focus-visible) {
+    outline: none;
+  }
+
+  :where(ore-slider[disabled], ore-slider[form-disabled]) {
+    --ore-slider-track-border: var(--ore-color-disabled-border);
+    --ore-slider-range-background: var(--ore-color-disabled);
+    --ore-slider-range-highlight: color-mix(in srgb, var(--ore-color-disabled), var(--ore-color-white) 10%);
+    --ore-slider-track-background: var(--ore-color-disabled);
+    --ore-slider-track-highlight: color-mix(in srgb, var(--ore-color-disabled), var(--ore-color-white) 20%);
+    --ore-slider-thumb-background: var(--ore-color-disabled);
+    --ore-slider-thumb-highlight: color-mix(in srgb, var(--ore-color-disabled), var(--ore-color-white) 60%);
+    --ore-slider-thumb-shadow: var(--ore-color-disabled-shadow);
+    --ore-slider-thumb-border: var(--ore-color-disabled-border);
+  }
+
+  :where(ore-slider[disabled], ore-slider[form-disabled]) > input[type="range"] {
+    cursor: not-allowed;
+  }
+
+  :where(ore-spinner) {
+    display: inline-block;
+    overflow: hidden;
+    box-sizing: border-box;
+    color: inherit;
+    vertical-align: -.125em;
+    width: 1em;
+    height: 1em;
+    line-height: 1;
+  }
+
+  :where(ore-spinner > svg) {
+    display: block;
+    animation: .8s steps(15, end) infinite ore-spinner;
+    width: 3475%;
+    max-width: none;
+    height: 100%;
+  }
+
+  @keyframes ore-spinner {
+    to {
+      transform: translateX(-97.1223%);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :where(ore-spinner > svg) {
+      animation: none;
+    }
+  }
+
+  :where(ore-switch) {
+    --ore-switch-unit: var(--ore-size-unit);
+    --ore-switch-track-background: var(--ore-color-neutral-50-background);
+    --ore-switch-track-highlight: var(--ore-color-neutral-50-highlight-focus);
+    --ore-switch-track-border: var(--ore-color-border);
+    --ore-switch-thumb-background: var(--ore-color-secondary-background);
+    --ore-switch-thumb-highlight: var(--ore-color-secondary-highlight);
+    --ore-switch-thumb-shadow: var(--ore-color-secondary-shadow);
+    --ore-switch-thumb-border: var(--ore-color-border);
+    --ore-switch-active-track-background: var(--ore-color-primary-background);
+    --ore-switch-active-track-highlight: var(--ore-color-primary-highlight);
+    --ore-switch-thumb-focus-ring: transparent;
+    --ore-switch-icon: var(--ore-color-gray-90);
+    display: inline-flex;
+    align-items:  center;
+    gap: calc(var(--ore-switch-unit) * 4);
+    min-height: calc(var(--ore-switch-unit) * 15);
+    color: var(--ore-color-border);
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  :where(ore-switch) .ore-switch-control {
+    display: flex;
+    width: calc(var(--ore-switch-unit) * 28);
+    height: calc(var(--ore-switch-unit) * 15);
+    align-items:  flex-end;
+  }
+
+  :where(ore-switch) .ore-switch-status {
+    position: relative;
+    z-index: 0;
+    box-sizing: border-box;
+    width: calc(var(--ore-switch-unit) * 13);
+    height: calc(var(--ore-switch-unit) * 13);
+    background: linear-gradient(var(--ore-switch-track-background), var(--ore-switch-track-background)) left calc(var(--ore-switch-unit) * 2) / calc(var(--ore-switch-unit) * 11) calc(var(--ore-switch-unit) * 9) no-repeat, linear-gradient(var(--ore-switch-track-highlight), var(--ore-switch-track-highlight)) left var(--ore-switch-unit) / calc(var(--ore-switch-unit) * 12) calc(var(--ore-switch-unit) * 11) no-repeat, var(--ore-switch-track-border);
+    flex: none;
+  }
+
+  :where(ore-switch) .ore-switch-button {
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    width: calc(var(--ore-switch-unit) * 15);
+    height: calc(var(--ore-switch-unit) * 15);
+    background: linear-gradient(var(--ore-switch-thumb-background), var(--ore-switch-thumb-background)) center calc(var(--ore-switch-unit) * 2) / calc(var(--ore-switch-unit) * 11) calc(var(--ore-switch-unit) * 9) no-repeat, linear-gradient(var(--ore-switch-thumb-shadow), var(--ore-switch-thumb-shadow)) center calc(var(--ore-switch-unit) * 12) / calc(var(--ore-switch-unit) * 13) calc(var(--ore-switch-unit) * 2) no-repeat, linear-gradient(var(--ore-switch-thumb-highlight), var(--ore-switch-thumb-highlight)) center var(--ore-switch-unit) / calc(var(--ore-switch-unit) * 13) calc(var(--ore-switch-unit) * 11) no-repeat, var(--ore-switch-thumb-border);
+    box-shadow: 0 0 0 var(--ore-switch-unit) var(--ore-switch-thumb-focus-ring);
+    flex: none;
+    order: -1;
+  }
+
+  :where(ore-switch[checked]) .ore-switch-button {
+    order: 0;
+  }
+
+  :where(ore-switch[checked]) .ore-switch-status {
+    background-position: right calc(var(--ore-switch-unit) * 2), right var(--ore-switch-unit), center;
+  }
+
+  :where(ore-switch[checked]) {
+    --ore-switch-track-background: var(--ore-switch-active-track-background);
+    --ore-switch-track-highlight: var(--ore-switch-active-track-highlight);
+    --ore-switch-icon: var(--ore-color-white);
+  }
+
+  :where(ore-switch[color="secondary"]) {
+    --ore-switch-active-track-background: var(--ore-color-secondary-background);
+    --ore-switch-active-track-highlight: var(--ore-color-secondary-highlight);
+  }
+
+  :where(ore-switch[color="destructive"]) {
+    --ore-switch-active-track-background: var(--ore-color-destructive-background);
+    --ore-switch-active-track-highlight: var(--ore-color-destructive-highlight);
+  }
+
+  :where(ore-switch[color="dungeons"]) {
+    --ore-switch-active-track-background: var(--ore-color-dungeons-background);
+    --ore-switch-active-track-highlight: var(--ore-color-dungeons-highlight);
+  }
+
+  :where(ore-switch[color="legends"]) {
+    --ore-switch-active-track-background: var(--ore-color-legends-background);
+    --ore-switch-active-track-highlight: var(--ore-color-legends-highlight);
+  }
+
+  :where(ore-switch[color="realms"]) {
+    --ore-switch-active-track-background: var(--ore-color-realms-background);
+    --ore-switch-active-track-highlight: var(--ore-color-realms-highlight);
+  }
+
+  :where(ore-switch[color="gold"]) {
+    --ore-switch-active-track-background: var(--ore-color-gold-background);
+    --ore-switch-active-track-highlight: var(--ore-color-gold-highlight);
+  }
+
+  :where(ore-switch[color="secondary"], ore-switch[color="dungeons"], ore-switch[color="legends"], ore-switch[color="gold"]) {
+    --ore-switch-icon: var(--ore-color-gray-100);
+  }
+
+  :where(ore-switch[variant="icons"]) .ore-switch-status:after {
+    position: absolute;
+    top: calc(var(--ore-switch-unit) * 2.5);
+    left: calc(var(--ore-switch-unit) * 2);
+    width: calc(var(--ore-switch-unit) * 8);
+    height: calc(var(--ore-switch-unit) * 8);
+    background: var(--ore-switch-icon);
+    content: "";
+    mask: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCA4IDgiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMiAxaDR2MUgyem00IDFoMXY0SDZ6TTIgMnY0SDFWMnptMCA0djFoNFY2eiIvPjwvc3ZnPgo=") center / contain no-repeat;
+  }
+
+  :where(ore-switch[checked][variant="icons"]) .ore-switch-status:after {
+    left: calc(var(--ore-switch-unit) * 3);
+    mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCA4IDgiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTMuNSAxaDF2NmgtMXoiLz48L3N2Zz4K");
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    :where(ore-switch:hover:not(:-webkit-any([disabled], [form-disabled]))) {
+      --ore-switch-thumb-background: var(--ore-color-secondary-background-hover);
+      --ore-switch-thumb-highlight: color-mix(in srgb, var(--ore-color-secondary-background-hover), var(--ore-color-white) 60%);
+    }
+
+    :where(ore-switch:hover:not(:-moz-any([disabled], [form-disabled]))) {
+      --ore-switch-thumb-background: var(--ore-color-secondary-background-hover);
+      --ore-switch-thumb-highlight: color-mix(in srgb, var(--ore-color-secondary-background-hover), var(--ore-color-white) 60%);
+    }
+
+    :where(ore-switch:hover:not(:is([disabled], [form-disabled]))) {
+      --ore-switch-thumb-background: var(--ore-color-secondary-background-hover);
+      --ore-switch-thumb-highlight: color-mix(in srgb, var(--ore-color-secondary-background-hover), var(--ore-color-white) 60%);
+    }
+  }
+
+  :where(ore-switch:active:not(:-webkit-any([disabled], [form-disabled])), ore-switch[pressed]:not(:-webkit-any([disabled], [form-disabled]))) {
+    --ore-switch-thumb-background: var(--ore-color-secondary-background-pressed);
+    --ore-switch-thumb-highlight: color-mix(in srgb, var(--ore-color-secondary-background-pressed), var(--ore-color-white) 40%);
+  }
+
+  :where(ore-switch:active:not(:-moz-any([disabled], [form-disabled])), ore-switch[pressed]:not(:-moz-any([disabled], [form-disabled]))) {
+    --ore-switch-thumb-background: var(--ore-color-secondary-background-pressed);
+    --ore-switch-thumb-highlight: color-mix(in srgb, var(--ore-color-secondary-background-pressed), var(--ore-color-white) 40%);
+  }
+
+  :where(ore-switch:active:not(:is([disabled], [form-disabled])), ore-switch[pressed]:not(:is([disabled], [form-disabled]))) {
+    --ore-switch-thumb-background: var(--ore-color-secondary-background-pressed);
+    --ore-switch-thumb-highlight: color-mix(in srgb, var(--ore-color-secondary-background-pressed), var(--ore-color-white) 40%);
+  }
+
+  :where(ore-switch:focus-visible) {
+    --ore-switch-thumb-highlight: color-mix(in srgb, var(--ore-color-secondary-background), var(--ore-color-white) 60%);
+    --ore-switch-thumb-focus-ring: var(--ore-color-focus-ring);
+    outline: var(--ore-switch-unit) solid var(--ore-color-focus-ring);
+    outline-offset: 0;
+    border-radius: 0;
+  }
+
+  :where(ore-switch[disabled], ore-switch[form-disabled]) {
+    --ore-switch-track-background: var(--ore-color-disabled);
+    --ore-switch-track-highlight: var(--ore-color-disabled);
+    --ore-switch-track-border: var(--ore-color-disabled-border);
+    --ore-switch-thumb-background: var(--ore-color-disabled);
+    --ore-switch-thumb-highlight: var(--ore-color-disabled);
+    --ore-switch-thumb-shadow: var(--ore-color-disabled-shadow);
+    --ore-switch-thumb-border: var(--ore-color-disabled-border);
+    --ore-switch-icon: var(--ore-color-disabled-foreground);
+    cursor: not-allowed;
+  }
+
+  :where(ore-tab-bar) {
+    display: flex;
+    align-items:  flex-end;
+  }
+
+  :where(ore-tab-button) {
+    --ore-tab-off-background: var(--ore-color-neutral-background);
+    --ore-tab-off-background-hover: var(--ore-color-neutral-background-hover);
+    --ore-tab-off-background-pressed: var(--ore-color-neutral-background-pressed);
+    --ore-tab-off-highlight: var(--ore-color-neutral-highlight);
+    --ore-tab-off-highlight-hover: var(--ore-color-neutral-highlight-hover);
+    --ore-tab-off-highlight-pressed: var(--ore-color-neutral-highlight-pressed);
+    --ore-tab-off-shadow: var(--ore-color-neutral-shadow);
+    --ore-tab-off-foreground: var(--ore-color-foreground);
+    --ore-tab-on-background: var(--ore-color-neutral-surface-raised);
+    --ore-tab-on-highlight: var(--ore-color-neutral-specular);
+    --ore-tab-on-foreground: var(--ore-color-neutral-text);
+    --ore-tab-indicator: var(--ore-color-white);
+    --ore-button-background-default: var(--ore-tab-off-background);
+    --ore-button-background-hover: var(--ore-tab-off-background-hover);
+    --ore-button-background-pressed: var(--ore-tab-off-background-pressed);
+    --ore-button-highlight-default: var(--ore-tab-off-highlight);
+    --ore-button-highlight-hover: var(--ore-tab-off-highlight-hover);
+    --ore-button-highlight-pressed: var(--ore-tab-off-highlight-pressed);
+    --ore-button-shadow: var(--ore-tab-off-shadow);
+    --ore-button-foreground: var(--ore-tab-off-foreground);
+    position: relative;
+    align-self:  flex-end;
+  }
+
+  :where(ore-tab-button[selected]) {
+    --ore-button-background-default: var(--ore-tab-on-background);
+    --ore-button-background-hover: var(--ore-tab-on-background);
+    --ore-button-background-pressed: var(--ore-tab-on-background);
+    --ore-button-highlight-default: var(--ore-tab-on-highlight);
+    --ore-button-highlight-hover: var(--ore-tab-on-highlight);
+    --ore-button-highlight-pressed: var(--ore-tab-on-highlight);
+    --ore-button-background: var(--ore-tab-on-background);
+    --ore-button-highlight: var(--ore-tab-on-highlight);
+    --ore-button-border: var(--ore-color-border);
+    --ore-button-shadow: transparent;
+    --ore-button-foreground: var(--ore-tab-on-foreground);
+    height: calc(var(--ore-button-unit) * 22);
+    padding-top: calc(var(--ore-button-unit) * 2);
+    background: linear-gradient(var(--ore-button-background), var(--ore-button-background)) center calc(100% - var(--ore-button-unit) * 2) / calc(100% - var(--ore-button-unit) * 4) calc(100% - var(--ore-button-unit) * 6) no-repeat, linear-gradient(var(--ore-button-highlight), var(--ore-button-highlight)) center calc(100% - var(--ore-button-unit)) / calc(100% - var(--ore-button-unit) * 2) calc(100% - var(--ore-button-unit) * 4) no-repeat, linear-gradient(var(--ore-button-border), var(--ore-button-border)) center bottom / 100% calc(100% - var(--ore-button-unit) * 2) no-repeat;
+    min-height: 0;
+    padding-bottom: 0;
+  }
+
+  :where(ore-tab-button[palette="toggle"]) {
+    --ore-tab-off-background: var(--ore-color-secondary-background);
+    --ore-tab-off-background-hover: var(--ore-color-secondary-background-hover);
+    --ore-tab-off-background-pressed: var(--ore-color-secondary-background);
+    --ore-tab-off-highlight: var(--ore-color-secondary-highlight);
+    --ore-tab-off-highlight-hover: var(--ore-color-secondary-highlight-hover);
+    --ore-tab-off-highlight-pressed: var(--ore-color-secondary-highlight);
+    --ore-tab-off-shadow: var(--ore-color-secondary-shadow);
+    --ore-tab-off-foreground: var(--ore-color-border);
+    --ore-tab-on-background: var(--ore-color-primary-background);
+    --ore-tab-on-highlight: color-mix(in srgb, var(--ore-color-primary-background), var(--ore-color-white) 10%);
+    --ore-tab-on-foreground: var(--ore-color-white);
+  }
+
+  :where(ore-tab-button:focus-visible) {
+    z-index: 1;
+  }
+
+  :where([role="tablist"]:not([aria-orientation="vertical"]) > ore-tab-button + ore-tab-button) {
+    margin-inline-start: calc(var(--ore-button-unit) * -1);
+  }
+
+  :where(ore-tab-button[selected]):before {
+    box-shadow: none;
+  }
+
+  :where(ore-tab-button[selected]):focus-visible:before {
+    position: absolute;
+    top: calc(var(--ore-button-unit) * 2);
+    box-shadow: inset 0 0 0 var(--ore-button-unit) var(--ore-color-focus-ring), inset 0 0 0 calc(var(--ore-button-unit) * 2) var(--ore-button-border);
+    content: "";
+    pointer-events: none;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  :where(ore-tab-button[selected]):after {
+    position: absolute;
+    bottom: var(--ore-button-unit);
+    width: calc(var(--ore-button-unit) * 22);
+    height: var(--ore-button-unit);
+    background: var(--ore-tab-indicator);
+    content: "";
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  :where(ore-tab-button[selected]:active:not(:-webkit-any([disabled], [form-disabled])), ore-tab-button[selected][pressed]:not(:-webkit-any([disabled], [form-disabled]))) {
+    --ore-button-face-offset: 0px;
+    padding-top: calc(var(--ore-button-unit) * 2);
+    clip-path: none;
+  }
+
+  :where(ore-tab-button[selected]:active:not(:-moz-any([disabled], [form-disabled])), ore-tab-button[selected][pressed]:not(:-moz-any([disabled], [form-disabled]))) {
+    --ore-button-face-offset: 0px;
+    padding-top: calc(var(--ore-button-unit) * 2);
+    clip-path: none;
+  }
+
+  :where(ore-tab-button[selected]:active:not(:is([disabled], [form-disabled])), ore-tab-button[selected][pressed]:not(:is([disabled], [form-disabled]))) {
+    --ore-button-face-offset: 0px;
+    padding-top: calc(var(--ore-button-unit) * 2);
+    clip-path: none;
+  }
+
+  :where(ore-tab-button:not([selected]):active:not(:-webkit-any([disabled], [form-disabled])), ore-tab-button:not([selected])[pressed]:not(:-webkit-any([disabled], [form-disabled]))) {
+    --ore-button-shadow: transparent;
+  }
+
+  :where(ore-tab-button:not([selected]):active:not(:-moz-any([disabled], [form-disabled])), ore-tab-button:not([selected])[pressed]:not(:-moz-any([disabled], [form-disabled]))) {
+    --ore-button-shadow: transparent;
+  }
+
+  :where(ore-tab-button:not([selected]):active:not(:is([disabled], [form-disabled])), ore-tab-button:not([selected])[pressed]:not(:is([disabled], [form-disabled]))) {
+    --ore-button-shadow: transparent;
+  }
+
+  :where(ore-tab-button[disabled], ore-tab-button[form-disabled]) {
+    --ore-button-background: var(--ore-tab-off-background);
+    --ore-button-highlight: var(--ore-tab-off-highlight);
+    --ore-button-border: var(--ore-color-border);
+    --ore-button-shadow: var(--ore-tab-off-shadow);
+    color: var(--ore-tab-off-foreground);
+  }
+
+  :where(ore-tab-button[selected][disabled], ore-tab-button[selected][form-disabled]) {
+    --ore-button-background: var(--ore-tab-on-background);
+    --ore-button-highlight: var(--ore-tab-on-highlight);
+    --ore-button-border: var(--ore-color-border);
+    --ore-button-shadow: transparent;
+    color: var(--ore-tab-on-foreground);
+  }
+
+  :where(ore-table) {
+    --ore-table-unit: var(--ore-size-unit);
+    --ore-table-border: var(--ore-color-border);
+    --ore-table-header-background: var(--ore-color-neutral-background);
+    --ore-table-row-background: var(--ore-color-neutral-surface-raised);
+    --ore-table-row-background-alternate: var(--ore-color-neutral-surface-sunken);
+    --ore-table-foreground: var(--ore-color-foreground);
+    --ore-table-sort-inactive: var(--ore-color-disabled-border);
+    display: block;
+    overflow-x: auto;
+    color: var(--ore-table-foreground);
+    font-family: var(--ore-font-body);
+    max-width: 100%;
+  }
+
+  :where(ore-table > table) {
+    width: calc(var(--ore-table-unit) * 256);
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+
+  :where(ore-table .ore-table-row-header-column) {
+    width: 23.4375%;
+  }
+
+  :where(ore-table .ore-table-data-column) {
+    width: 19.1406%;
+  }
+
+  :where(ore-table th, ore-table td) {
+    box-sizing: border-box;
+    height: calc(var(--ore-table-unit) * 21);
+    padding: 0 calc(var(--ore-table-unit) * 4);
+    overflow: hidden;
+    border: var(--ore-table-unit) solid var(--ore-table-border);
+    background: var(--ore-table-row-background);
+    font-size: calc(var(--ore-table-unit) * 7);
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  :where(ore-table thead th, ore-table tbody th) {
+    background: var(--ore-table-header-background);
+  }
+
+  :where(ore-table .ore-table-corner:empty) {
+    background: none;
+    border: 0;
+  }
+
+  :where(ore-table th[aria-sort]) {
+    padding: 0;
+  }
+
+  :where(ore-table[variant="striped"] tbody tr:nth-child(2n) td) {
+    background: var(--ore-table-row-background-alternate);
+  }
+
+  :where(ore-table .ore-table-sort) {
+    position: relative;
+    display: grid;
+    box-sizing: border-box;
+    padding: 0 calc(var(--ore-table-unit) * 6);
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    background: none;
+    border: 0;
+    place-items:  center;
+    width: 100%;
+    height: 100%;
+  }
+
+  :where(ore-table .ore-table-sort-indicator) {
+    position: absolute;
+    top: 50%;
+    right: calc(var(--ore-table-unit) * 2);
+    width: calc(var(--ore-table-unit) * 4);
+    height: calc(var(--ore-table-unit) * 7);
+    transform: translateY(-50%);
+  }
+
+  :where(ore-table .ore-table-sort-indicator):before {
+    position: absolute;
+    height: calc(var(--ore-table-unit) * 4);
+    content: "";
+    mask: none center / contain no-repeat;
+    background: currentColor;
+    width: 100%;
+    left: 0;
+  }
+
+  :where(ore-table .ore-table-sort-indicator):after {
+    position: absolute;
+    height: calc(var(--ore-table-unit) * 4);
+    content: "";
+    mask: none center / contain no-repeat;
+    background: currentColor;
+    width: 100%;
+    left: 0;
+  }
+
+  :where(ore-table .ore-table-sort-indicator):before {
+    color: var(--ore-table-sort-inactive);
+    mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCA4IDgiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNNi41IDUuNXYxaDF2LTF6bS0zLTN2MWgxdi0xem0zIDN2LTFoLTF2MS0xaC0uMDAzdi0xaC0xdjEtMUgyLjV2MWguOTk3LTF2LjAzNEgxLjVWNS41aC0xdjFoNnoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgLS41KSIvPjwvc3ZnPgo=");
+    top: 0;
+  }
+
+  :where(ore-table .ore-table-sort-indicator):after {
+    color: var(--ore-table-sort-inactive);
+    mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCA4IDgiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMS41IDMuNXYtMWgtMXYxem0zIDN2LTFoLTF2MXptLTMtM3YxaDF2LTEgMWguMDAzdjFoMXYtMSAxSDUuNXYtMWgtLjk5NyAxdi0uMDM0SDYuNVYzLjVoMXYtMWgtNnoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgLS41KSIvPjwvc3ZnPg==");
+    bottom: 0;
+  }
+
+  :where(ore-table th[aria-sort="ascending"] .ore-table-sort-indicator):before {
+    color: var(--ore-table-foreground);
+  }
+
+  :where(ore-table th[aria-sort="descending"] .ore-table-sort-indicator):after {
+    color: var(--ore-table-foreground);
+  }
+
+  :where(ore-table .ore-table-sort:focus-visible) {
+    outline: var(--ore-table-unit) solid var(--ore-color-focus-ring);
+    outline-offset: calc(var(--ore-table-unit) * -1);
+  }
+
+  :where(ore-tag) {
+    --ore-tag-unit: var(--ore-size-unit);
+    --ore-tag-background: var(--ore-color-neutral-surface-deep);
+    --ore-tag-foreground: var(--ore-color-neutral-text);
+    --ore-tag-border: transparent;
+    display: inline-flex;
+    box-sizing: border-box;
+    min-height: calc(var(--ore-tag-unit) * 8.5);
+    padding: 0 calc(var(--ore-tag-unit) * 2.5);
+    color: var(--ore-tag-foreground);
+    background: var(--ore-tag-background);
+    box-shadow: 0 0 0 var(--ore-tag-unit) var(--ore-tag-border);
+    font-family: var(--ore-font-body);
+    font-size: calc(var(--ore-tag-unit) * 7);
+    font-weight: 400;
+    line-height: calc(var(--ore-tag-unit) * 8);
+    white-space: nowrap;
+    justify-content: center;
+    align-items:  center;
+  }
+
+  :where(ore-tag[outlined]) {
+    --ore-tag-border: var(--ore-color-border);
+  }
+
+  :where(ore-tag[variant="secondary"]) {
+    --ore-tag-background: var(--ore-color-neutral-surface-raised);
+  }
+
+  :where(ore-tag[variant="primary"]) {
+    --ore-tag-background: var(--ore-color-primary-tint-background);
+    --ore-tag-foreground: var(--ore-color-primary-tint-foreground);
+  }
+
+  :where(ore-tag[variant="informative"]) {
+    --ore-tag-background: var(--ore-color-informative-tint-background);
+    --ore-tag-foreground: var(--ore-color-informative-tint-foreground);
+  }
+
+  :where(ore-tag[variant="notice"]) {
+    --ore-tag-background: var(--ore-color-notice-tint-background);
+    --ore-tag-foreground: var(--ore-color-notice-tint-foreground);
+  }
+
+  :where(ore-tag[variant="warning"]) {
+    --ore-tag-background: var(--ore-color-destructive-tint-background);
+    --ore-tag-foreground: var(--ore-color-destructive-tint-foreground);
+  }
+
+  :where(ore-tag[variant="realms-informative"]) {
+    --ore-tag-background: var(--ore-color-realms-informative-tint-background);
+    --ore-tag-foreground: var(--ore-color-neutral-border);
+  }
+
+  :where(ore-textarea) {
+    --ore-textarea-unit: var(--ore-size-unit);
+    --ore-textarea-background: var(--ore-color-neutral-surface-raised);
+    --ore-textarea-shadow: var(--ore-color-neutral-surface-sunken);
+    --ore-textarea-border: var(--ore-color-border);
+    --ore-textarea-foreground: var(--ore-color-foreground);
+    --ore-textarea-input-foreground: var(--ore-color-foreground);
+    --ore-textarea-description: var(--ore-color-disabled);
+    --ore-textarea-error: var(--ore-color-destructive-highlight-hover);
+    --ore-textarea-focus-ring: transparent;
+    --ore-textarea-caret: var(--ore-color-primary-background);
+    display: inline-grid;
+    width: min(100%, calc(var(--ore-textarea-unit) * 122));
+    color: var(--ore-textarea-foreground);
+    font-family: var(--ore-font-body);
+  }
+
+  :where(ore-textarea > .ore-textarea-label) {
+    font-size: calc(var(--ore-textarea-unit) * 8);
+    line-height: calc(var(--ore-textarea-unit) * 10);
+    cursor: text;
+  }
+
+  :where(ore-textarea > .ore-textarea-control) {
+    display: grid;
+    box-sizing: border-box;
+    min-height: calc(var(--ore-textarea-unit) * 38);
+    margin-top: var(--ore-textarea-unit);
+    padding: calc(var(--ore-textarea-unit) * 3) calc(var(--ore-textarea-unit) * 1) calc(var(--ore-textarea-unit) * 1);
+    overflow: hidden;
+    background: linear-gradient(var(--ore-textarea-shadow), var(--ore-textarea-shadow)) center var(--ore-textarea-unit) / calc(100% - var(--ore-textarea-unit) * 2) calc(var(--ore-textarea-unit) * 2) no-repeat, linear-gradient(var(--ore-textarea-background), var(--ore-textarea-background)) center calc(var(--ore-textarea-unit) * 3) / calc(100% - var(--ore-textarea-unit) * 2) calc(100% - var(--ore-textarea-unit) * 4) no-repeat, var(--ore-textarea-border);
+    box-shadow: 0 0 0 var(--ore-textarea-unit) var(--ore-textarea-focus-ring);
+  }
+
+  :where(ore-textarea .ore-textarea-input) {
+    box-sizing: border-box;
+    min-height: calc(var(--ore-textarea-unit) * 32);
+    padding: calc(var(--ore-textarea-unit) * 2) calc(var(--ore-textarea-unit) * 3);
+    outline: 0;
+    color: var(--ore-textarea-input-foreground);
+    font: inherit;
+    font-size: calc(var(--ore-textarea-unit) * 8);
+    line-height: calc(var(--ore-textarea-unit) * 10);
+    caret-color: var(--ore-textarea-caret);
+    resize: both;
+    background: none;
+    border: 0;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+  }
+
+  :where(ore-textarea > .ore-textarea-description) {
+    margin-top: calc(var(--ore-textarea-unit) * 2);
+    color: var(--ore-textarea-description);
+    font-size: calc(var(--ore-textarea-unit) * 6);
+    line-height: calc(var(--ore-textarea-unit) * 7);
+  }
+
+  :where(ore-textarea > .ore-textarea-error) {
+    margin-top: calc(var(--ore-textarea-unit) * 2);
+    color: var(--ore-textarea-error);
+    font-size: calc(var(--ore-textarea-unit) * 6);
+    line-height: calc(var(--ore-textarea-unit) * 7);
+  }
+
+  :where(ore-textarea[aria-invalid="true"] > .ore-textarea-control) {
+    --ore-textarea-border: var(--ore-color-destructive-highlight);
+    --ore-textarea-shadow: var(--ore-color-destructive-shadow);
+  }
+
+  :where(ore-textarea:has(.ore-textarea-input:focus-visible)) {
+    --ore-textarea-focus-ring: var(--ore-color-focus-ring);
+  }
+
+  :where(ore-textarea[disabled], ore-textarea[form-disabled]) {
+    --ore-textarea-background: var(--ore-color-disabled);
+    --ore-textarea-shadow: var(--ore-color-disabled-shadow);
+    --ore-textarea-border: var(--ore-color-disabled-border);
+    --ore-textarea-foreground: var(--ore-color-disabled);
+    --ore-textarea-input-foreground: var(--ore-color-disabled);
+  }
+
+  :where(ore-textarea[disabled], ore-textarea[form-disabled]) > .ore-textarea-label {
+    cursor: not-allowed;
+  }
+
+  :where(ore-textfield) {
+    --ore-textfield-unit: var(--ore-size-unit);
+    --ore-textfield-background: var(--ore-color-neutral-surface-raised);
+    --ore-textfield-shadow: var(--ore-color-neutral-surface-sunken);
+    --ore-textfield-border: var(--ore-color-border);
+    --ore-textfield-foreground: var(--ore-color-foreground);
+    --ore-textfield-input-foreground: var(--ore-color-foreground);
+    --ore-textfield-description: var(--ore-color-disabled);
+    --ore-textfield-error: var(--ore-color-destructive-highlight-hover);
+    --ore-textfield-focus-ring: transparent;
+    --ore-textfield-caret: var(--ore-color-primary-background);
+    display: inline-grid;
+    width: min(100%, calc(var(--ore-textfield-unit) * 122));
+    color: var(--ore-textfield-foreground);
+    font-family: var(--ore-font-body);
+  }
+
+  :where(ore-textfield > .ore-textfield-label) {
+    font-size: calc(var(--ore-textfield-unit) * 8);
+    line-height: calc(var(--ore-textfield-unit) * 10);
+    cursor: text;
+  }
+
+  :where(ore-textfield > .ore-textfield-control) {
+    display: flex;
+    box-sizing: border-box;
+    height: calc(var(--ore-textfield-unit) * 22);
+    margin-top: var(--ore-textfield-unit);
+    padding: calc(var(--ore-textfield-unit) * 3) calc(var(--ore-textfield-unit) * 1) calc(var(--ore-textfield-unit) * 1);
+    background: linear-gradient(var(--ore-textfield-shadow), var(--ore-textfield-shadow)) center var(--ore-textfield-unit) / calc(100% - var(--ore-textfield-unit) * 2) calc(var(--ore-textfield-unit) * 2) no-repeat, linear-gradient(var(--ore-textfield-background), var(--ore-textfield-background)) center calc(var(--ore-textfield-unit) * 3) / calc(100% - var(--ore-textfield-unit) * 2) calc(100% - var(--ore-textfield-unit) * 4) no-repeat, var(--ore-textfield-border);
+    box-shadow: 0 0 0 var(--ore-textfield-unit) var(--ore-textfield-focus-ring);
+    align-items:  center;
+  }
+
+  :where(ore-textfield .ore-textfield-input) {
+    box-sizing: border-box;
+    padding: 0 calc(var(--ore-textfield-unit) * 3);
+    outline: 0;
+    color: var(--ore-textfield-input-foreground);
+    font: inherit;
+    font-size: calc(var(--ore-textfield-unit) * 8);
+    caret-color: var(--ore-textfield-caret);
+    background: none;
+    border: 0;
+    flex: 1;
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    margin: 0;
+  }
+
+  :where(ore-textfield .ore-textfield-icon) {
+    display: inline-flex;
+    width: calc(var(--ore-textfield-unit) * 8);
+    height: calc(var(--ore-textfield-unit) * 8);
+    margin-left: calc(var(--ore-textfield-unit) * 3);
+    color: var(--ore-textfield-foreground);
+    pointer-events: none;
+    flex: none;
+    justify-content: center;
+    align-items:  center;
+  }
+
+  :where() {
+    color: var(--ore-color-disabled-foreground-dim);
+    opacity: 1;
+  }
+
+  :where(ore-textfield > .ore-textfield-description) {
+    margin-top: calc(var(--ore-textfield-unit) * 2);
+    color: var(--ore-textfield-description);
+    font-size: calc(var(--ore-textfield-unit) * 6);
+    line-height: calc(var(--ore-textfield-unit) * 7);
+  }
+
+  :where(ore-textfield > .ore-textfield-error) {
+    margin-top: calc(var(--ore-textfield-unit) * 2);
+    color: var(--ore-textfield-error);
+    font-size: calc(var(--ore-textfield-unit) * 6);
+    line-height: calc(var(--ore-textfield-unit) * 7);
+  }
+
+  :where(ore-textfield[aria-invalid="true"] > .ore-textfield-control) {
+    --ore-textfield-border: var(--ore-color-destructive-highlight);
+    --ore-textfield-shadow: var(--ore-color-destructive-shadow);
+  }
+
+  :where(ore-textfield:has(.ore-textfield-input:focus-visible)) {
+    --ore-textfield-focus-ring: var(--ore-color-focus-ring);
+  }
+
+  :where(ore-textfield[disabled], ore-textfield[form-disabled]) {
+    --ore-textfield-background: var(--ore-color-disabled);
+    --ore-textfield-shadow: var(--ore-color-disabled-shadow);
+    --ore-textfield-border: var(--ore-color-disabled-border);
+    --ore-textfield-foreground: var(--ore-color-disabled);
+    --ore-textfield-input-foreground: var(--ore-color-disabled);
+  }
+
+  :where(ore-textfield[disabled], ore-textfield[form-disabled]) > .ore-textfield-label {
+    cursor: not-allowed;
+  }
+
+  :where(ore-toast) {
+    --ore-toast-unit: var(--ore-size-unit);
+    --ore-toast-inset: calc(var(--ore-toast-unit) * 16);
+    --ore-toast-background: var(--ore-color-neutral-surface-deep);
+    --ore-toast-foreground: var(--ore-color-neutral-text);
+    --ore-toast-border: var(--ore-color-border);
+    --ore-toast-shadow: var(--ore-color-black-opacity-30);
+    position: fixed;
+    box-sizing: border-box;
+    max-width: min(calc(100vw - var(--ore-toast-inset) * 2), 32rem);
+    min-height: calc(var(--ore-toast-unit) * 16);
+    padding: calc(var(--ore-toast-unit) * 3) calc(var(--ore-toast-unit) * 5);
+    overflow-wrap: anywhere;
+    border: var(--ore-toast-unit) solid var(--ore-toast-border);
+    color: var(--ore-toast-foreground);
+    background: var(--ore-toast-background);
+    box-shadow: var(--ore-toast-unit) var(--ore-toast-unit) 0 var(--ore-toast-shadow);
+    font-family: var(--ore-font-body);
+    font-size: calc(var(--ore-toast-unit) * 8);
+    font-weight: 400;
+    line-height: calc(var(--ore-toast-unit) * 8);
+    text-align: center;
+    margin: 0;
+    inset: auto;
+  }
+
+  ore-toast:popover-open {
+    margin: 0;
+    inset: auto;
+  }
+
+  :where(ore-toast:not(:popover-open)) {
+    display: none;
+  }
+
+  ore-toast:popover-open[position="top-start"] {
+    top: var(--ore-toast-inset);
+    left: var(--ore-toast-inset);
+  }
+
+  ore-toast:popover-open[position="top-center"] {
+    top: var(--ore-toast-inset);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  ore-toast:popover-open[position="top-end"] {
+    top: var(--ore-toast-inset);
+    right: var(--ore-toast-inset);
+  }
+
+  ore-toast:popover-open[position="bottom-start"] {
+    bottom: var(--ore-toast-inset);
+    left: var(--ore-toast-inset);
+  }
+
+  ore-toast:popover-open[position="bottom-center"] {
+    bottom: var(--ore-toast-inset);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  ore-toast:popover-open[position="bottom-end"] {
+    right: var(--ore-toast-inset);
+    bottom: var(--ore-toast-inset);
+    left: auto;
+    transform: none;
+  }
+
+  :where(ore-toast[variant="secondary"]) {
+    --ore-toast-background: var(--ore-color-neutral-surface-raised);
+  }
+
+  :where(ore-toast[variant="primary"]) {
+    --ore-toast-background: var(--ore-color-primary-tint-background);
+    --ore-toast-foreground: var(--ore-color-primary-tint-foreground);
+  }
+
+  :where(ore-toast[variant="informative"]) {
+    --ore-toast-background: var(--ore-color-informative-tint-background);
+    --ore-toast-foreground: var(--ore-color-informative-tint-foreground);
+  }
+
+  :where(ore-toast[variant="notice"]) {
+    --ore-toast-background: var(--ore-color-notice-tint-background);
+    --ore-toast-foreground: var(--ore-color-notice-tint-foreground);
+  }
+
+  :where(ore-toast[variant="warning"]) {
+    --ore-toast-background: var(--ore-color-destructive-tint-background);
+    --ore-toast-foreground: var(--ore-color-destructive-tint-foreground);
+  }
+
+  :where(ore-toast[variant="realms-informative"]) {
+    --ore-toast-background: var(--ore-color-realms-informative-tint-background);
+    --ore-toast-foreground: var(--ore-color-neutral-border);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    :where(ore-toast:popover-open) {
+      animation: ore-toast-show var(--ore-motion-fast) steps(2, jump-none);
+    }
+  }
+
+  @keyframes ore-toast-show {
+    from {
+      opacity: 0;
+    }
+  }
+
+  :where(ore-toggles) {
+    display: flex;
+    align-items:  flex-end;
+  }
+
+  :where(ore-tooltip) {
+    --ore-tooltip-unit: var(--ore-size-unit);
+    --_ore-tooltip-pixel-size: var(--ore-size-unit);
+    --ore-tooltip-corner-size: var(--_ore-tooltip-pixel-size);
+    --ore-tooltip-background: var(--ore-color-informative-background);
+    --ore-tooltip-border: var(--ore-color-border);
+    --ore-tooltip-foreground: var(--ore-color-foreground);
+    display: inline-block;
+  }
+
+  :where(ore-tooltip > .ore-tooltip-content) {
+    position: fixed;
+    isolation: isolate;
+    box-sizing: border-box;
+    min-width: calc(var(--ore-tooltip-unit) * 76);
+    max-width: min(calc(var(--ore-tooltip-unit) * 152), calc(100vw - 2rem));
+    min-height: calc(var(--ore-tooltip-unit) * 14);
+    padding: calc(var(--ore-tooltip-unit) * 3) calc(var(--ore-tooltip-unit) * 6);
+    overflow: visible;
+    color: var(--ore-tooltip-foreground);
+    font-family: var(--ore-font-body);
+    font-size: calc(var(--ore-tooltip-unit) * 7);
+    pointer-events: none;
+    background: none;
+    border: 0;
+    margin: 0;
+    line-height: 1;
+    inset: auto;
+  }
+
+  :where(ore-tooltip > .ore-tooltip-content):before {
+    position: absolute;
+    z-index: -2;
+    background: var(--ore-tooltip-border);
+    clip-path: polygon(var(--ore-tooltip-corner-size) 0, calc(100% - var(--ore-tooltip-corner-size)) 0, calc(100% - var(--ore-tooltip-corner-size)) var(--ore-tooltip-corner-size), 100% var(--ore-tooltip-corner-size), 100% calc(100% - var(--ore-tooltip-corner-size)), calc(100% - var(--ore-tooltip-corner-size)) calc(100% - var(--ore-tooltip-corner-size)), calc(100% - var(--ore-tooltip-corner-size)) 100%, var(--ore-tooltip-corner-size) 100%, var(--ore-tooltip-corner-size) calc(100% - var(--ore-tooltip-corner-size)), 0 calc(100% - var(--ore-tooltip-corner-size)), 0 var(--ore-tooltip-corner-size), var(--ore-tooltip-corner-size) var(--ore-tooltip-corner-size));
+    content: "";
+    inset: 0;
+  }
+
+  :where(ore-tooltip > .ore-tooltip-content):after {
+    position: absolute;
+    z-index: -2;
+    background: var(--ore-tooltip-border);
+    clip-path: polygon(var(--ore-tooltip-corner-size) 0, calc(100% - var(--ore-tooltip-corner-size)) 0, calc(100% - var(--ore-tooltip-corner-size)) var(--ore-tooltip-corner-size), 100% var(--ore-tooltip-corner-size), 100% calc(100% - var(--ore-tooltip-corner-size)), calc(100% - var(--ore-tooltip-corner-size)) calc(100% - var(--ore-tooltip-corner-size)), calc(100% - var(--ore-tooltip-corner-size)) 100%, var(--ore-tooltip-corner-size) 100%, var(--ore-tooltip-corner-size) calc(100% - var(--ore-tooltip-corner-size)), 0 calc(100% - var(--ore-tooltip-corner-size)), 0 var(--ore-tooltip-corner-size), var(--ore-tooltip-corner-size) var(--ore-tooltip-corner-size));
+    content: "";
+    inset: 0;
+  }
+
+  :where(ore-tooltip > .ore-tooltip-content):after {
+    z-index: -1;
+    inset: var(--ore-tooltip-unit);
+    background: var(--ore-tooltip-background);
+  }
+
+  :where(ore-tooltip > .ore-tooltip-content:not(:popover-open)) {
+    display: none;
+  }
+
+  :where(ore-tooltip .ore-tooltip-arrow) {
+    position: absolute;
+    z-index: 0;
+    width: calc(var(--_ore-tooltip-pixel-size) * 3 + var(--ore-tooltip-unit) * 2);
+    height: calc(var(--_ore-tooltip-pixel-size) * 3 + var(--ore-tooltip-unit));
+    color: var(--ore-tooltip-border);
+  }
+
+  :where(ore-tooltip .ore-tooltip-arrow):before {
+    position: absolute;
+    content: "";
+    background: currentColor;
+  }
+
+  :where(ore-tooltip .ore-tooltip-arrow):after {
+    position: absolute;
+    content: "";
+    background: currentColor;
+  }
+
+  :where(ore-tooltip .ore-tooltip-arrow):before {
+    z-index: 0;
+    top: calc(var(--ore-tooltip-unit) * -1);
+    height: calc(var(--_ore-tooltip-pixel-size) * 3 + var(--ore-tooltip-unit) * 2);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, calc(var(--_ore-tooltip-pixel-size) * 2) 100%, calc(var(--_ore-tooltip-pixel-size) * 2) calc(var(--_ore-tooltip-pixel-size) * 2 + var(--ore-tooltip-unit) * 2), var(--_ore-tooltip-pixel-size) calc(var(--_ore-tooltip-pixel-size) * 2 + var(--ore-tooltip-unit) * 2), var(--_ore-tooltip-pixel-size) calc(var(--_ore-tooltip-pixel-size)  + var(--ore-tooltip-unit) * 2), 0 calc(var(--_ore-tooltip-pixel-size)  + var(--ore-tooltip-unit) * 2));
+    width: 100%;
+    left: 0;
+  }
+
+  :where(ore-tooltip .ore-tooltip-arrow):after {
+    z-index: 1;
+    top: calc(var(--ore-tooltip-unit) * -2);
+    left: var(--ore-tooltip-unit);
+    width: calc(var(--_ore-tooltip-pixel-size) * 3);
+    height: calc(var(--_ore-tooltip-pixel-size) * 3 + var(--ore-tooltip-unit) * 2);
+    background: var(--ore-tooltip-background);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, calc(var(--_ore-tooltip-pixel-size) * 2) 100%, calc(var(--_ore-tooltip-pixel-size) * 2) calc(var(--_ore-tooltip-pixel-size) * 2 + var(--ore-tooltip-unit) * 2), var(--_ore-tooltip-pixel-size) calc(var(--_ore-tooltip-pixel-size) * 2 + var(--ore-tooltip-unit) * 2), var(--_ore-tooltip-pixel-size) calc(var(--_ore-tooltip-pixel-size)  + var(--ore-tooltip-unit) * 2), 0 calc(var(--_ore-tooltip-pixel-size)  + var(--ore-tooltip-unit) * 2));
+  }
+
+  :where(ore-tooltip[side="top"] .ore-tooltip-arrow) {
+    top: 100%;
+    right: calc(var(--_ore-tooltip-pixel-size) * 2);
+  }
+
+  :where(ore-tooltip[side="bottom"] .ore-tooltip-arrow) {
+    right: calc(var(--_ore-tooltip-pixel-size) * 2);
+    bottom: 100%;
+    transform: rotate(180deg)scaleX(-1);
+  }
+
+  :where(ore-tooltip[side="left"] .ore-tooltip-arrow) {
+    top: var(--ore-tooltip-arrow-y, 50%);
+    left: calc(100% - var(--_ore-tooltip-pixel-size) / 2);
+    transform: translateY(-50%)rotate(-90deg);
+  }
+
+  :where(ore-tooltip[side="right"] .ore-tooltip-arrow) {
+    top: var(--ore-tooltip-arrow-y, 50%);
+    right: calc(100% - var(--_ore-tooltip-pixel-size) / 2);
+    transform: translateY(-50%)rotate(90deg);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    :where(ore-tooltip > .ore-tooltip-content:popover-open) {
+      animation: ore-tooltip-show var(--ore-motion-fast) steps(2, jump-none);
+    }
+  }
+
+  @keyframes ore-tooltip-show {
+    from {
+      opacity: 0;
+    }
+  }
+}

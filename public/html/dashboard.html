@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/dist/dashboard.css">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/public/css/common.css">
+</head>
+<body>
+    <div class="row" style="justify-content: space-between;">
+        <h1 class="heading">CC:C Observe</h1>
+        <ore-button type="button">Refresh</ore-button>
+    </div>
+    
+    <div class="row">   
+        <!--Stress-->
+        <ore-container variant="dark">
+            <h2>Systemauslastung</h2>
+            <ore-divider></ore-divider>
+            <div class="row">
+                <p id="current_stress"></p> 
+                <p>/</p>
+                <p id="current_max_capacity"></p> 
+            </div>
+        </ore-container>
+
+        <!--Status-->
+        <ore-container variant="dark">
+            <h2>Status</h2>
+        </ore-container>
+    </div>
+
+    <!--Table-->
+    <div class="row" style="margin-left: 1rem;">
+        <div>
+            <h2>Items</h2>
+            <ore-table variant="striped" style="overflow: auto; height: 30rem;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Item</th>
+                            <th scope="col">Anzahl</th>
+                        </tr>
+                    </thead>
+                    <tbody id="item_list"></tbody>
+                </table>
+            </ore-table>
+        </div>
+        <div>
+            <h2>Item history</h2>
+            <canvas style="max-width: stretch !important" id="item_history_chart"></canvas>
+        </div>
+    </div>
+</body>
+<script type="module"  src="/public/dist/dashboard.js"></script>
+</html>

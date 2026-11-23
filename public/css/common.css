@@ -1,0 +1,27 @@
+.row {
+    display: flex;
+    justify-content: start;
+}
+.heading {
+    margin-left: 1rem;
+}
+
+body {
+    background-color: var(--ore-color-neutral-surface-deep);
+}
+
+h1 {
+    font-family: var(--ore-font-display);
+    color: var(--ore-color-foreground);
+}
+
+h2, p {
+  font-family: var(--ore-font-body);
+  font-size: var(--ore-font-size-body);
+  line-height: var(--ore-line-height-body);
+  color: var(--ore-color-foreground);
+}
+
+ore-container {
+    margin: 1rem;
+}
